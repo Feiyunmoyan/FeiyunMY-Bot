@@ -23,6 +23,17 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# 加载 .env（敏感配置：API Key / 访问令牌），必须在读取 config.yaml 之前
+try:
+    from dotenv import load_dotenv
+
+    _ENV_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+    if os.path.exists(_ENV_FILE):
+        load_dotenv(_ENV_FILE, override=False)
+        logger.info("已从 .env 加载环境变量")
+except ImportError:
+    logger.warning("未安装 python-dotenv，跳过 .env 加载（可 pip install python-dotenv）")
+
 # 初始化数据目录
 DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 for sub in ["logs", "memories", "personas", "mcp", "skills"]:
@@ -36,8 +47,8 @@ def validate_config(cfg: dict) -> list[str]:
     """校验配置合法性，返回警告/错误信息列表"""
     warnings = []
     provider = cfg.get("provider", {})
-    if not provider.get("api_key"):
-        warnings.append("⚠️ provider.api_key 未设置！请配置 API Key 或设置环境变量 FEIYUN_API_KEY")
+    if not provider.get("api_key") and not os.environ.get("FEIYUN_API_KEY"):
+        warnings.append("⚠️ provider.api_key 未设置！请在 .env 中配置 FEIYUN_API_KEY")
     if not provider.get("base_url"):
         warnings.append("⚠️ provider.base_url 未设置，将使用默认值")
     if not provider.get("model"):
@@ -236,6 +247,115 @@ from slowapi.errors import RateLimitExceeded
 limiter = Limiter(key_func=get_remote_address, default_limits=["60/minute"])
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
+# ==========================================
+# 跨域配置（仅放行开发模式前端来源）
+# ==========================================
+from fastapi.middleware.cors import CORSMiddleware
+
+_auth_cfg = (config.get("server", {}) or {}).get("auth", {}) or {}
+_cors_origins = _auth_cfg.get("cors_origins") or ["http://localhost:3000", "http://127.0.0.1:3000"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=_cors_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# ==========================================
+# 访问鉴权
+#   1) 本机回环地址可免令牌（便于本机浏览器直接使用）
+#   2) 局域网 / 移动端：Authorization: Bearer <令牌>，或登录后使用 HttpOnly Cookie
+#   3) 令牌来源：环境变量 FEIYUN_ACCESS_TOKEN > data/access_token.txt > 自动生成
+# ==========================================
+import secrets as _secrets
+from fastapi import Request
+from fastapi.responses import JSONResponse
+
+AUTH_ENABLED = bool(_auth_cfg.get("enabled", True))
+AUTH_LOCAL_BYPASS = bool(_auth_cfg.get("local_bypass", True))
+AUTH_COOKIE_NAME = "feiyun_token"
+AUTH_COOKIE_MAX_AGE = int(_auth_cfg.get("cookie_max_age_hours", 720)) * 3600
+AUTH_TOKEN_FILE = os.path.join(DATA_DIR, "access_token.txt")
+
+# 免鉴权路径：静态资源与管理面板外壳（令牌在页面内输入）
+PUBLIC_PATHS = ("/", "/favicon.ico", "/docs", "/redoc", "/openapi.json")
+PUBLIC_PREFIXES = ("/admin", "/assets/", "/api/auth/")
+_LOCAL_HOSTS = ("127.0.0.1", "::1", "localhost", "")
+
+
+def _load_access_token() -> str:
+    """读取访问令牌；没有则自动生成并落盘"""
+    token = (os.environ.get("FEIYUN_ACCESS_TOKEN") or "").strip()
+    if token:
+        return token
+    if os.path.exists(AUTH_TOKEN_FILE):
+        try:
+            with open(AUTH_TOKEN_FILE, "r", encoding="utf-8") as f:
+                saved = f.read().strip()
+            if saved:
+                return saved
+        except OSError:
+            pass
+    token = _secrets.token_urlsafe(24)
+    try:
+        with open(AUTH_TOKEN_FILE, "w", encoding="utf-8") as f:
+            f.write(token)
+        logger.warning("未配置 FEIYUN_ACCESS_TOKEN，已自动生成访问令牌 → data/access_token.txt")
+    except OSError as e:
+        logger.error(f"访问令牌写入失败: {e}")
+    return token
+
+
+ACCESS_TOKEN = _load_access_token()
+
+
+def _extract_token(request: Request) -> str:
+    """依次尝试 Bearer Header / X-Access-Token / Cookie"""
+    auth_header = request.headers.get("authorization", "") or ""
+    if auth_header.lower().startswith("bearer "):
+        return auth_header[7:].strip()
+    header_token = (request.headers.get("x-access-token", "") or "").strip()
+    if header_token:
+        return header_token
+    return (request.cookies.get(AUTH_COOKIE_NAME) or "").strip()
+
+
+def _is_public_path(path: str) -> bool:
+    if path in PUBLIC_PATHS:
+        return True
+    return any(path.startswith(p) for p in PUBLIC_PREFIXES)
+
+
+def _is_local_request(request: Request) -> bool:
+    client = getattr(request, "client", None)
+    return bool(client is not None and (client.host or "") in _LOCAL_HOSTS)
+
+
+def _token_ok(token: str) -> bool:
+    return bool(token) and _secrets.compare_digest(token, ACCESS_TOKEN)
+
+
+@app.middleware("http")
+async def access_guard(request: Request, call_next):
+    """全局访问守卫"""
+    if not AUTH_ENABLED:
+        return await call_next(request)
+    if request.method == "OPTIONS":
+        return await call_next(request)
+    path = request.url.path
+    if _is_public_path(path):
+        return await call_next(request)
+    if AUTH_LOCAL_BYPASS and _is_local_request(request):
+        return await call_next(request)
+    if _token_ok(_extract_token(request)):
+        return await call_next(request)
+    logger.warning(f"拒绝未授权访问: {request.method} {path} <- {getattr(request.client, 'host', '?')}")
+    return JSONResponse(
+        {"detail": "unauthorized", "message": "缺少或错误的访问令牌"},
+        status_code=401,
+    )
 
 # 注册路由
 app.include_router(chat.router, prefix="/api")
@@ -447,10 +567,11 @@ async def startup():
     # 启动时执行一次艾宾浩斯记忆清理（即使服务器关机多天，开机时自动清理过期记忆）
     if hasattr(memory_selector, 'get_backend'):
         memoria = memory_selector.get_backend()
+        expired = 0
         if hasattr(memoria, 'cleanup_expired'):
             expired = memoria.cleanup_expired()
         if expired > 0:
-                logger.info(f"启动时自动清理了 {expired} 条过期记忆")
+            logger.info(f"启动时自动清理了 {expired} 条过期记忆")
         
         # 24小时自动清理定时任务
         async def _periodic_cleanup():
@@ -527,6 +648,8 @@ async def startup():
     logger.info(f"  人格: {active_persona}")
     logger.info(f"  记忆: {'MemoriaDB' if memory_enabled else 'Simple'} (开关: {memory_enabled})")
     logger.info(f"  存储: SQLite ({DB_PATH})")
+    if AUTH_ENABLED:
+        logger.info(f"  鉴权: 已启用（本机回环免令牌: {AUTH_LOCAL_BYPASS}，令牌见 {AUTH_TOKEN_FILE}）")
 
 
 async def shutdown():
@@ -563,6 +686,53 @@ async def root():
 @app.get("/favicon.ico")
 async def favicon():
     return {}
+
+
+# ==========================================
+# 鉴权接口（移动端 / 局域网访问使用）
+# ==========================================
+from pydantic import BaseModel
+
+
+class LoginPayload(BaseModel):
+    token: str = ""
+
+
+@app.get("/api/auth/status")
+async def auth_status(request: Request):
+    """查询鉴权状态：前端据此决定是否弹出令牌输入框"""
+    return {
+        "auth_enabled": AUTH_ENABLED,
+        "local_bypass": AUTH_LOCAL_BYPASS and _is_local_request(request),
+        "authenticated": (not AUTH_ENABLED)
+        or (AUTH_LOCAL_BYPASS and _is_local_request(request))
+        or _token_ok(_extract_token(request)),
+    }
+
+
+@app.post("/api/auth/login")
+async def auth_login(payload: LoginPayload):
+    """用令牌换取 HttpOnly Cookie（浏览器端后续请求自动携带）"""
+    token = (payload.token or "").strip()
+    if not AUTH_ENABLED or _token_ok(token):
+        response = JSONResponse({"ok": True, "auth_enabled": AUTH_ENABLED})
+        if AUTH_ENABLED:
+            response.set_cookie(
+                key=AUTH_COOKIE_NAME,
+                value=ACCESS_TOKEN,
+                max_age=AUTH_COOKIE_MAX_AGE,
+                httponly=True,
+                samesite="lax",
+            )
+        return response
+    return JSONResponse({"ok": False, "message": "访问令牌不正确"}, status_code=401)
+
+
+@app.post("/api/auth/logout")
+async def auth_logout():
+    response = JSONResponse({"ok": True})
+    response.delete_cookie(AUTH_COOKIE_NAME)
+    return response
 
 
 if __name__ == "__main__":

@@ -1,0 +1,139 @@
+# ============================================
+# FeiyunMY-Bot 配置模板
+# 用法：复制为 config.yaml 后按需修改
+#     copy config.example.yaml config.yaml
+#
+# 敏感字段（API Key）不要写在这里，请放到 .env：
+#     FEIYUN_API_KEY=sk-xxxx
+#     TAVILY_API_KEY=tvly-xxxx
+#     FEIYUN_ACCESS_TOKEN=自定义访问令牌（留空则自动生成）
+# .env 已被 .gitignore 排除，config.yaml 同样不入库。
+# ============================================
+
+active_provider_id: default-deepseek
+features:
+  keep_thinking: true
+mcp:
+  enabled: false
+memoria:
+  chromadb_path: data/memoria/chromadb
+  ebbinghaus:
+    cleanup_interval: 86400
+    cleanup_threshold: 0.3
+    decay_factor: 0.1
+    default_retention: 0.8
+    enabled: true
+    target_capacity: 750000
+  emotion_analysis:
+    enabled: true
+  importance:
+    min_score: 0.3
+  retrieval_top_k: 5
+  vector_store: chromadb
+memory:
+  backend: memoria
+  enabled: true
+  max_recent: 200
+  mode: memoria
+persona:
+  active: 绯璃
+  enabled: true
+provider:
+  # 留空即可，实际值从环境变量 FEIYUN_API_KEY 读取
+  api_key: ''
+  base_url: https://api.deepseek.com
+  compression_enabled: true
+  compression_interval: 20
+  compression_mode: summarize
+  compression_model: deepseek-v4-pro
+  compression_prompt: 请将以下多轮对话压缩为一段简洁的摘要，保留所有重要信息（用户偏好、需求、关键事实、重要结论），去掉寒暄和重复内容。摘要需连贯可读，200字以内。
+  compression_strategy: llm_summarize
+  frequency_penalty: 0
+  max_context_tokens: 400000
+  max_tokens: 4096
+  model: deepseek-v4-flash
+  presence_penalty: 0
+  temperature: 0.7
+  top_p: 1
+  truncate_drop_turns: 1
+  truncate_keep_turns: 30
+  type: openai
+providers:
+- api_key: ''
+  base_url: https://api.deepseek.com
+  enabled: true
+  id: default-deepseek
+  models:
+  - enabled: true
+    id: deepseek-v4-flash
+    status: available
+  - enabled: true
+    id: deepseek-v4-pro
+    status: available
+  name: DeepSeek
+  type: openai
+server:
+  host: 0.0.0.0
+  port: 8765
+  auth:
+    enabled: true
+    local_bypass: true
+    token_env: FEIYUN_ACCESS_TOKEN
+    cookie_max_age_hours: 720
+    cors_origins:
+    - http://localhost:3000
+    - http://127.0.0.1:3000
+shell_whitelist:
+  commands:
+  - dir
+  - echo
+  - type
+  - python
+  - pip
+  - git
+  - ipconfig
+  - systeminfo
+  - tasklist
+  - findstr
+  - find
+  - cd
+  - pwd
+  - whoami
+  - hostname
+  - python --version
+  - python -V
+  - pip list
+  - git status
+  - git log
+  - git branch
+  enabled: false
+skills:
+  enabled: true
+tools:
+  calculator: false
+  code_exec: false
+  common_utils: true
+  datetime: false
+  execute: false
+  file_ops: true
+  file_ops_full_access: false
+  http_request: true
+  json_process: true
+  manage_session: true
+  max_agent_rounds: 20
+  memory_query: true
+  note_taking: true
+  random_utils: false
+  shell_exec: false
+  web: true
+  web_extract: false
+  web_search: false
+web_search:
+  # 留空即可，实际值从环境变量 TAVILY_API_KEY 读取
+  api_key: ''
+  enabled: true
+  engines:
+  - enabled: true
+    name: 默认搜索
+    type: web
+  provider: tavily

@@ -10,6 +10,13 @@ color 0A
 
 cd /d "F:\FeiyunMY-Bot"
 
+:: 优先使用项目独立虚拟环境
+if exist ".venv\Scripts\python.exe" (
+    set "PY=.venv\Scripts\python.exe"
+) else (
+    set "PY=python"
+)
+
 :: 检查是否已在运行
 tasklist /fi "ImageName eq python.exe" /v 2>nul | findstr "main.py" >nul
 if %errorlevel% equ 0 (
@@ -20,7 +27,7 @@ if %errorlevel% equ 0 (
 )
 
 :: 检查 Python
-python --version >nul 2>&1
+%PY% --version >nul 2>&1
 if %errorlevel% neq 0 (
     echo [FAIL] 未检测到 Python
     pause
@@ -28,10 +35,10 @@ if %errorlevel% neq 0 (
 )
 
 :: 检查并安装依赖
-pip show -q fastapi 2>nul
+%PY% -m pip show -q fastapi 2>nul
 if %errorlevel% neq 0 (
     echo [..] 正在安装依赖...
-    pip install -r requirements.txt
+    %PY% -m pip install -r requirements.txt
     if %errorlevel% neq 0 (
         echo [FAIL] 依赖安装失败
         pause
@@ -41,15 +48,15 @@ if %errorlevel% neq 0 (
 )
 
 :: 检查 python-multipart
-pip show -q python-multipart 2>nul
+%PY% -m pip show -q python-multipart 2>nul
 if %errorlevel% neq 0 (
-    pip install python-multipart >nul 2>&1
+    %PY% -m pip install python-multipart >nul 2>&1
 )
 
 echo [..] 正在后台启动 FeiyunMY-Bot...
 
 :: 后台启动服务
-start /min /b "" python main.py > data\logs\server.log 2>&1
+start /min /b "" %PY% main.py > data\logs\server.log 2>&1
 
 :: 等待几秒检查是否启动成功
 timeout /t 3 /nobreak >nul
@@ -63,6 +70,9 @@ if %errorlevel% equ 0 (
     echo  管理面板:  http://localhost:8765/admin  ✨ 全新暗红色主题！
     echo  API 文档:  http://localhost:8765/docs
     echo  Chat 页面:  http://localhost:8765/admin/#/chat
+    echo.
+    echo  局域网 / 移动端访问需要访问令牌
+    echo  令牌文件:  data\access_token.txt
     echo.
     echo  日志文件:  data\logs\server.log
     echo  停止服务:  双击 stop.bat
