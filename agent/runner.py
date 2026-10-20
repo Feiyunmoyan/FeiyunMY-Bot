@@ -619,6 +619,11 @@ class AgentRunner:
         # 检查是否需要压缩上下文
         messages = await self.context_manager.process(messages)
 
+        final_reply = ""
+        final_reasoning = None
+        round_text = ""
+        round_reasoning = None
+
         for round_idx in range(self.max_rounds):
             messages = await self.context_manager.process(messages)
             available = self.tool_registry.get_tool_definitions()
