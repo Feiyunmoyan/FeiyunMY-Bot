@@ -12,6 +12,7 @@ from provider import BaseProvider
 from provider.openai_provider import OpenAIProvider
 from agent.conversation_store import ConversationContext
 from agent.context_compressor import ContextManager
+from agent.provider_select import ProviderSelectMixin
 from memory import MemoryBridge
 from persona.manager import PersonaManager
 from tools.registry import ToolRegistry
@@ -52,7 +53,7 @@ DEFAULT_COMPRESS_PROMPT = (
 )
 
 
-class AgentRunner:
+class AgentRunner(ProviderSelectMixin):
     """Agent 执行器"""
 
     def __init__(
@@ -104,17 +105,6 @@ class AgentRunner:
             self._round_date = today
             self._round_count = 0
         self._round_count += 1
-
-    def get_provider_for_agent(self, agent_config: dict = None) -> BaseProvider:
-        """
-        根据 Agent 配置获取对应的 provider 实例
-        如果传了 agent_config 且有 model_id，则尝试从 ProviderManager 获取
-        """
-        if agent_config and agent_config.get("model_id") and self.provider_manager:
-            model_provider = self.provider_manager.get_provider_for_agent(agent_config)
-            if model_provider:
-                return model_provider
-        return self.provider
 
     # ─── 对话总结 ───
 
