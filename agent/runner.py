@@ -84,6 +84,7 @@ class AgentRunner:
         
         # 上下文管理器（统一管理压缩和截断）
         self._round_count = 0  # 对话轮次计数器
+        self._round_date = ""  # 计数器所属日期，跨天归零
         compression_cfg = (config or {}).get("provider", {})
         self.context_manager = ContextManager(
             max_context_tokens=self.max_context_tokens,
@@ -96,6 +97,14 @@ class AgentRunner:
             provider=self.provider,
         )
     
+    def _bump_round_count(self) -> None:
+        """当天总轮次计数 +1；日期变了先归零（闸门语义是当天累计，非按会话）"""
+        today = time.strftime("%Y-%m-%d")
+        if today != self._round_date:
+            self._round_date = today
+            self._round_count = 0
+        self._round_count += 1
+
     def get_provider_for_agent(self, agent_config: dict = None) -> BaseProvider:
         """
         根据 Agent 配置获取对应的 provider 实例
@@ -571,7 +580,7 @@ class AgentRunner:
                 })
 
         # 更新轮次计数器
-        self._round_count += 1
+        self._bump_round_count()
 
         # 检查是否需要增量压缩昨天消息
         from api.push_messages import PUSH_CHANNEL_ID
@@ -724,7 +733,7 @@ class AgentRunner:
             await self.context.add_message(session_id, "user", user_message)
 
         # 更新轮次计数器
-        self._round_count += 1
+        self._bump_round_count()
 
         # 检查是否需要增量压缩昨天消息（普通消息频道，今天聊够10轮后触发）
         from api.push_messages import PUSH_CHANNEL_ID
