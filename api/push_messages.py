@@ -181,6 +181,9 @@ async def push_chat_stream(req: PushChatRequest):
         need_record = True
 
     async def event_generator():
+        # 嵌套函数内对 _last_push_msg_id 有赋值，必须显式声明 global，
+        # 否则它会被当作局部变量，第 202 行引用时抛 UnboundLocalError
+        global _last_push_msg_id
         full_reply = ""
         try:
             async for event in _runner.run_stream(req.message, PUSH_CHANNEL_ID):

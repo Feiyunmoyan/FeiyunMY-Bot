@@ -1,0 +1,25 @@
+# ruff 配置：https://docs.astral.sh/ruff/
+target-version = "py313"
+line-length = 120
+
+exclude = [
+    ".git", ".venv", "venv", "data", "webui", "docs",
+    "__pycache__", "*.bat",
+]
+
+[lint]
+# F   = pyflakes：F821 未定义名 / F823 未绑定局部变量 / F811 重复定义 / F401 未使用 import
+# E9  = 语法与运行时错误
+select = ["F", "E9"]
+
+# 以下为历史遗留，待专项清理后再逐个移出 ignore（移出即视为 gate 生效）：
+#   F401 unused-import    62 处
+#   F541 f-string 无占位符   6 处
+#   F841 unused-variable     8 处
+ignore = ["F401", "F541", "F841"]
+
+[lint.isort]
+known-first-party = [
+    "api", "agent", "memory", "tools", "provider", "workspace",
+    "active_engine", "knowledge", "skills", "persona", "mcp", "db", "utils",
+]

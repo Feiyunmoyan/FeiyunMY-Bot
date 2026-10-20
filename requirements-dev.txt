@@ -1,0 +1,4 @@
+# 开发期依赖（不参与运行）
+-r requirements.txt
+
+ruff>=0.17.0
