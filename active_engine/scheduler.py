@@ -20,6 +20,7 @@ from active_engine.disturbance import (
 from active_engine.push import PushEngine, PushMessage
 from active_engine.weights import SITUATION_MATRICES, WeightsMixin, _score_memory
 from active_engine.situation import SituationMixin, _judge_situation
+from active_engine.push_exec import PushExecMixin
 
 logger = logging.getLogger(__name__)
 
@@ -49,7 +50,7 @@ class AutonomousRateLimiter:
         self._turn_count = 0
 
 
-class ActiveScheduler(SituationMixin, WeightsMixin):
+class ActiveScheduler(PushExecMixin, SituationMixin, WeightsMixin):
     """
     主动引擎调度器 V2
 
@@ -341,19 +342,6 @@ class ActiveScheduler(SituationMixin, WeightsMixin):
         import asyncio
         asyncio.ensure_future(self._do_push_greeting(content))
 
-    async def _do_push_greeting(self, content: str):
-        """异步推送问候消息"""
-        from active_engine.push import PushMessage
-        msg = PushMessage(
-            content=content,
-            msg_type="active_push",
-            priority="normal",
-            source="系统",
-            store_policy="memorable",
-        )
-        await self.push_engine.push(msg)
-        self.adaptive.record_push(replied=False)
-
     # ═══════════════════════════════════════
     #  反馈回路
     # ═══════════════════════════════════════
@@ -419,41 +407,6 @@ class ActiveScheduler(SituationMixin, WeightsMixin):
     # ═══════════════════════════════════════
     #  推送方法
     # ═══════════════════════════════════════
-
-    async def _push_to_ai_chat(self, content_hint: str, source: str = ""):
-        """推送给AI生成自然聊天内容"""
-        if not content_hint:
-            return
-
-        msg = PushMessage(
-            content=content_hint,
-            msg_type="active_push",
-            priority="normal",
-            source=source,
-            store_policy="memorable",
-        )
-        await self.push_engine.push(msg)
-        self.adaptive.record_push(replied=False)
-
-    async def push_system_event(self, content: str, priority: str = "normal", source: str = ""):
-        """推送系统事件（不走AI生成）"""
-        msg = PushMessage(
-            content=content,
-            msg_type="system_event",
-            priority=priority,
-            source=source,
-            store_policy="ephemeral",
-        )
-        await self.push_engine.push(msg)
-
-    def add_task(self, content: str, due_at: float):
-        """添加一条定时任务（指令通道）"""
-        self._pending_tasks.append({
-            "content": content,
-            "due_at": due_at,
-            "created_at": time.time(),
-        })
-        logger.info(f"添加定时任务: {content[:40]}... 到期: {due_at}")
 
     def handle_ai_intent(self, intent: dict):
         """处理AI回复中的自主意图——V2.3: AI直接在自然对话中调工具，无需JSON格式"""
