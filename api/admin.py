@@ -895,7 +895,7 @@ async def get_system_stats():
 @router.get("/api/logs")
 async def get_logs(lines: int = 100, level: str = "", keyword: str = ""):
     """获取平台日志"""
-    from utils.platform_logger import get_recent_logs, get_log_stats
+    from utils.logging import get_recent_logs, get_log_stats
     logs = get_recent_logs(lines=min(lines, 500), level=level, keyword=keyword)
     stats = get_log_stats()
     return {"logs": logs, "total": len(logs), "stats": stats}

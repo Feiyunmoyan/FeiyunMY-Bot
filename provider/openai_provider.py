@@ -17,7 +17,7 @@ from openai.types.chat.chat_completion_chunk import ChatCompletionChunk
 
 logger = logging.getLogger(__name__)
 
-from provider.base import BaseProvider
+from provider import BaseProvider
 
 
 class OpenAIProvider(BaseProvider):

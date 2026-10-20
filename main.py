@@ -204,7 +204,7 @@ skills_manager = SkillsManager()
 
 # 初始化 Agent
 from agent.runner import AgentRunner
-from agent.context import ConversationContext
+from agent.conversation_store import ConversationContext
 from db.database import FeiyunDatabase
 
 # 初始化数据库
@@ -220,7 +220,7 @@ _ws_manager = None  # 全局引用，供 shutdown 使用
 # 注入依赖到 API 路由
 from api import chat, admin
 from api.chat import set_chat_agent_deps
-from utils.conversation_logger import ConversationLogger
+from utils.logging import ConversationLogger
 
 conversation_logger = ConversationLogger()
 chat.set_runner(agent_loop)
@@ -378,8 +378,6 @@ from api.knowledge import router as knowledge_router, set_knowledge_manager as s
 app.include_router(knowledge_router, prefix="/api")
 
 # 注册通知历史 API
-from api.notifications import router as notif_router, set_database as set_notif_db
-app.include_router(notif_router, prefix="/api")
 
 # 注册普通消息持久化 API
 from api.push_messages import router as push_router, set_push_store_deps as set_push_deps, set_runner as set_push_runner, set_scheduler as set_push_scheduler, PUSH_CHANNEL_ID
@@ -390,7 +388,7 @@ async def startup():
     global context, agent_loop, _active_scheduler, _ws_manager
 
     # 初始化平台日志系统
-    from utils.platform_logger import setup_logging
+    from utils.logging import setup_logging
     setup_logging()
     logger.info(f"平台日志已初始化: {os.path.join('data', 'logs', 'platform.log')}")
 
@@ -473,8 +471,7 @@ async def startup():
     logger.info(f"知识库系统已初始化: {len(knowledge_manager.list_knowledge_bases())} 个知识库")
 
     # 注入数据库到通知 API
-    set_notif_db(db)
-
+    
     # 启动时清理旧通知（保留 200 条）
     try:
         cleaned = await db.cleanup_old_notifications(max_count=50)

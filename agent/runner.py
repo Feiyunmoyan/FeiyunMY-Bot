@@ -7,11 +7,11 @@ import logging
 import asyncio
 from typing import List, Dict, Any, Optional, AsyncGenerator
 
-from provider.base import BaseProvider
+from provider import BaseProvider
 from provider.openai_provider import OpenAIProvider
-from agent.context import ConversationContext
-from agent.context_manager import ContextManager
-from memory.bridge import MemoryBridge
+from agent.conversation_store import ConversationContext
+from agent.context_compressor import ContextManager
+from memory import MemoryBridge
 from persona.manager import PersonaManager
 from tools.registry import ToolRegistry
 

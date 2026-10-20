@@ -3,7 +3,7 @@
 支持运行时切换记忆模式（simple / memoria）
 """
 import logging
-from memory.bridge import MemoryBridge
+from memory import MemoryBridge
 from memory.backends.simple import SimpleMemory
 from memory.backends.memoria import MemoriaMemory
 

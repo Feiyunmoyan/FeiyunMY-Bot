@@ -5,7 +5,7 @@ Provider 管理器
 import logging
 from typing import Dict, Optional, Any
 
-from provider.base import BaseProvider
+from provider import BaseProvider
 from provider.openai_provider import OpenAIProvider
 
 logger = logging.getLogger(__name__)

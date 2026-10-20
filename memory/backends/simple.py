@@ -6,7 +6,7 @@ import time
 import logging
 from typing import List, Dict, Optional
 
-from memory.bridge import MemoryBridge
+from memory import MemoryBridge
 
 logger = logging.getLogger(__name__)
 

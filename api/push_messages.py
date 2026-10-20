@@ -238,3 +238,18 @@ async def get_push_message_count():
         return {"total": 0}
     count = await _db.count_push_messages()
     return {"total": count}
+
+
+# ===================== 通知历史（原 api/notifications.py）=====================
+
+
+@router.get("/notifications")
+async def list_notifications(
+    page: int = Query(1, ge=1),
+    page_size: int = Query(50, ge=1, le=200),
+    msg_type: str = Query(None, description="筛选类型：active_push / system_event / agent_report"),
+):
+    """分页查询通知历史"""
+    if not _db:
+        return {"error": "数据库未初始化"}
+    return await _db.list_notifications(page=page, page_size=page_size, msg_type=msg_type)

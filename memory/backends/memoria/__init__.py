@@ -12,7 +12,7 @@ import chromadb
 import math
 import random
 
-from memory.bridge import MemoryBridge
+from memory import MemoryBridge
 from memory.backends.memoria.emotion import EmotionAnalyzer
 from memory.backends.memoria.emotion_fusion import EmotionFusion
 from memory.backends.memoria.importance import ImportanceScorer
