@@ -8,7 +8,6 @@ import time
 from typing import Dict, Any, Optional, AsyncGenerator
 
 from provider import BaseProvider
-from provider.openai_provider import OpenAIProvider
 from agent.conversation_store import ConversationContext
 from agent.context_builder import ContextBuilderMixin
 from agent.context_compressor import ContextManager
@@ -265,18 +264,7 @@ class AgentRunner(ToolExecMixin, ContextBuilderMixin, ProviderSelectMixin):
         if self.config.get("features", {}).get("keep_thinking") and reasoning_content:
             result["reasoning"] = reasoning_content
 
-        # 解析AI回复中的自主意图（AI自主通道）
-        if self.scheduler and final_reply:
-            self._parse_and_execute_intents(final_reply, session_id)
-
         return result
-
-    def _parse_and_execute_intents(self, reply: str, session_id: str):
-        """V2.3: AI自主意图已在自然对话中通过工具调用完成，不再需要JSON解析"""
-        # V2.3: AI在自然对话中表达意图，工具调用通过正常API tools参数执行
-        # AI说"让我查一下"就会触发工具调用，结果自动回到AI手中
-        # 不再需要 {"_intents": [...]} 格式
-        pass
 
     # ─── 流式执行 ───
 
@@ -404,10 +392,6 @@ class AgentRunner(ToolExecMixin, ContextBuilderMixin, ProviderSelectMixin):
         from api.push_messages import PUSH_CHANNEL_ID
         if session_id == PUSH_CHANNEL_ID and self._round_count >= 10:
             asyncio.create_task(self._check_daily_compress())
-
-        # 解析AI回复中的自主意图（流式版）
-        if self.scheduler and final_reply:
-            self._parse_and_execute_intents(final_reply, session_id)
 
         yield {
             "type": "done",

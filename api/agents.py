@@ -3,7 +3,7 @@
 提供 Agent 配置的 CRUD 操作接口
 """
 import logging
-from typing import Optional, List
+from typing import Optional
 from fastapi import APIRouter
 from pydantic import BaseModel
 

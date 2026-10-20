@@ -2,8 +2,8 @@
 互联网工具：搜索网络信息、读取网页内容
 合并了 web_search 和 web_extract
 """
-from tools.web_search import web_search, WEB_SEARCH_DEFINITION
-from tools.web_extract import web_extract, WEB_EXTRACT_DEFINITION
+from tools.web_search import web_search
+from tools.web_extract import web_extract
 
 WEB_DEFINITION = {
     "type": "function",

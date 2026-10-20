@@ -5,7 +5,6 @@ FeiyunMY-Bot 主入口
 import os
 import sys
 import time
-import yaml
 import logging
 import asyncio
 import uvicorn
@@ -66,7 +65,7 @@ def validate_config(cfg: dict) -> list[str]:
 
 
 # 加载配置（通过配置热加载模块管理）
-from utils.config_reloader import init_config as init_config_reloader, get_config, reload_config as hot_reload_config
+from utils.config_reloader import init_config as init_config_reloader
 config = init_config_reloader(os.path.join(os.path.dirname(__file__), "config.yaml"))
 
 # 校验配置
@@ -380,7 +379,7 @@ app.include_router(knowledge_router, prefix="/api")
 # 注册通知历史 API
 
 # 注册普通消息持久化 API
-from api.push_messages import router as push_router, set_push_store_deps as set_push_deps, set_runner as set_push_runner, set_scheduler as set_push_scheduler, PUSH_CHANNEL_ID
+from api.push_messages import router as push_router, set_push_store_deps as set_push_deps, set_runner as set_push_runner, set_scheduler as set_push_scheduler
 app.include_router(push_router, prefix="/api")
 
 
@@ -486,7 +485,7 @@ async def startup():
     # 迁移旧数据：将 conversations 表中 __push_channel__ 的数据迁移到 push_messages 表
     try:
         import uuid
-        from api.push_messages import PUSH_CHANNEL_ID, MAX_MESSAGES
+        from api.push_messages import PUSH_CHANNEL_ID
         old_conv = await db.get_conversation(PUSH_CHANNEL_ID)
         if old_conv and old_conv.content:
             old_msgs = old_conv.content

@@ -3,7 +3,6 @@
 将记忆文本分为5种类型：偏好/事实/状态/事件/查询
 BGE语义匹配为主，字典法留作降级端口
 """
-import re
 import logging
 
 logger = logging.getLogger(__name__)

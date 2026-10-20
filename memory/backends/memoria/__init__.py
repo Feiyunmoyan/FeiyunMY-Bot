@@ -101,4 +101,8 @@ class MemoriaMemory(StoreMixin, RetrievalMixin, LifecycleMixin, MemoryBridge):
         )
 
 
-__all__ = ["MemoriaMemory", "EmotionAnalyzer", "EmotionFusion", "EbbinghausManager", "ImportanceScorer"]
+__all__ = ["MemoriaMemory", "EmotionAnalyzer", "EmotionFusion", "EbbinghausManager", "ImportanceScorer",
+    "BGE_MODEL_PATH",
+    "_get_sentence_transformer",
+    "semantic_similarity",
+]

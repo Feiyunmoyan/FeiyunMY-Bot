@@ -6,7 +6,6 @@
 import uuid
 import time
 import logging
-from typing import Optional
 import json
 from fastapi import APIRouter, Query, HTTPException
 from fastapi.responses import StreamingResponse

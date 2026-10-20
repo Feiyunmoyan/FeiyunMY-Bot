@@ -12,11 +12,15 @@ exclude = [
 # E9  = 语法与运行时错误
 select = ["F", "E9"]
 
-# 以下为历史遗留，待专项清理后再逐个移出 ignore（移出即视为 gate 生效）：
-#   F401 unused-import    62 处
-#   F541 f-string 无占位符   6 处
-#   F841 unused-variable     8 处
-ignore = ["F401", "F541", "F841"]
+# F841 unused-variable 暂留 ignore：
+# 现存 8 处历史遗留的空赋值（now / today_str / hour / tools_cfg / before / meta / usage / params），
+# 逐个删除需要确认是否带副作用（ruff 将其标记为 unsafe fix），
+# 清理完即把 F841 从这里移出。
+ignore = ["F841"]
+
+[lint.per-file-ignores]
+# admin.py 按约定暂不重构（99 个接口，风险高），其内部 5 处函数级未使用 import 保留原状
+"api/admin.py" = ["F401"]
 
 [lint.isort]
 known-first-party = [

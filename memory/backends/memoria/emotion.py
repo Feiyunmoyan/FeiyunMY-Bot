@@ -6,9 +6,8 @@ GoEmotions 28类细粒度情感 + VAD三维坐标（效价/唤醒/支配）
 import os
 import json
 import logging
-import math
-from typing import Dict, Any, Optional, Tuple
-from dataclasses import dataclass, field
+from typing import Dict, Any, Tuple
+from dataclasses import dataclass
 
 logger = logging.getLogger(__name__)
 

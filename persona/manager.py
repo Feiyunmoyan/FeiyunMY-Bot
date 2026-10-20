@@ -5,9 +5,8 @@
 """
 import os
 import yaml
-import shutil
 import logging
-from typing import List, Dict, Optional
+from typing import List, Dict
 from datetime import datetime
 
 logger = logging.getLogger(__name__)

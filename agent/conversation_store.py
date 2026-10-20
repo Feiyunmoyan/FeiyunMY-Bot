@@ -6,7 +6,7 @@
 import logging
 import time
 import uuid
-from typing import List, Dict, Optional
+from typing import List, Dict
 
 from db.database import FeiyunDatabase
 

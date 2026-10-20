@@ -257,7 +257,7 @@ def _op_list(mgr):
 def _op_get(mgr, workspace_id):
     ws = mgr.get_workspace(workspace_id)
     if not ws:
-        return f"错误：工作空间不存在"
+        return "错误：工作空间不存在"
 
     stats = mgr.get_workspace_stats(workspace_id)
     tasks = ws.get("tasks", [])
@@ -299,7 +299,7 @@ def _op_update(mgr, workspace_id, name, description):
     ws = mgr.update_workspace(workspace_id, updates)
     if not ws:
         return "错误：工作空间不存在"
-    return f"工作空间已更新"
+    return "工作空间已更新"
 
 
 def _op_delete(mgr, workspace_id):
@@ -316,7 +316,7 @@ async def _op_add_task(mgr, workspace_id, agent, task_description, depends_on):
     task_id = mgr.add_task(workspace_id, agent, task_description, depends_on)
     _record_token(workspace_id)
     if not task_id:
-        return f"错误：工作空间不存在"
+        return "错误：工作空间不存在"
 
     dep_info = f"（依赖：{', '.join(depends_on)}）" if depends_on else ""
     return f"任务已创建：{task_id}\n{agent}：{task_description} {dep_info}"

@@ -4,7 +4,6 @@
 不再删除原始消息，不再清空 conversations 表
 """
 import logging
-import time
 from datetime import datetime, timezone, timedelta
 from typing import Optional
 

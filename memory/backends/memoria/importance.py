@@ -4,7 +4,7 @@
 """
 import logging
 import re
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 
 logger = logging.getLogger(__name__)
 

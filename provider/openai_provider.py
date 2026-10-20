@@ -7,9 +7,8 @@ OpenAI 兼容 Provider
 由 SDK 内部管理连接池、重试、超时等。
 """
 import os
-import json
 import logging
-from typing import List, Dict, Any, Optional, AsyncGenerator
+from typing import List, Optional
 
 from openai import AsyncOpenAI
 from openai.types.chat.chat_completion import ChatCompletion

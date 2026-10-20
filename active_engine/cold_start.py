@@ -4,7 +4,7 @@
 """
 import logging
 import time
-from typing import Optional, Callable
+from typing import Callable
 
 logger = logging.getLogger(__name__)
 
@@ -47,7 +47,7 @@ class ColdStarter:
             if self.db:
                 last_greet = await self.db.get_config("last_cold_start_time")
                 if last_greet and time.time() - float(last_greet) < 7200:
-                    logger.info(f"冷启动跳过：2小时内已问候过")
+                    logger.info("冷启动跳过：2小时内已问候过")
                     return
         except Exception:
             pass

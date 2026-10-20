@@ -4,7 +4,7 @@
 """
 import logging
 from typing import Optional
-from fastapi import APIRouter, UploadFile, File, Form
+from fastapi import APIRouter, UploadFile, File
 from pydantic import BaseModel
 
 logger = logging.getLogger(__name__)

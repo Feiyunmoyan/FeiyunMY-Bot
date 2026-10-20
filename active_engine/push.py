@@ -8,10 +8,7 @@ import uuid
 import time
 import asyncio
 import logging
-from typing import Optional, AsyncGenerator
-from datetime import datetime
-from fastapi import FastAPI
-from fastapi.responses import StreamingResponse
+from typing import AsyncGenerator
 
 logger = logging.getLogger(__name__)
 
@@ -220,7 +217,7 @@ class PushEngine:
                     yield message.to_sse()
                 except asyncio.TimeoutError:
                     # 发送心跳，保持连接
-                    yield f": heartbeat\n\n"
+                    yield ": heartbeat\n\n"
         except asyncio.CancelledError:
             logger.info("SSE 客户端断开连接")
         finally:

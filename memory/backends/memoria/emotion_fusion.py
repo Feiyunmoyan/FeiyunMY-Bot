@@ -4,7 +4,7 @@
 """
 import logging
 import time
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Tuple
 from dataclasses import dataclass
 
 logger = logging.getLogger(__name__)

@@ -3,7 +3,6 @@
 基于黑名单的安全策略，除了系统核心路径外，其他文件均可读取
 """
 import os
-import re
 import fnmatch
 import logging
 from datetime import datetime
@@ -267,7 +266,7 @@ async def _read_file(path: str, encoding: str = "utf-8") -> str:
         except UnicodeDecodeError:
             continue
 
-    return f"无法解码文件，请尝试指定其他 encoding 参数"
+    return "无法解码文件，请尝试指定其他 encoding 参数"
 
 
 async def _list_directory(path: str) -> str:

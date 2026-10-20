@@ -3,7 +3,7 @@ Provider 管理器
 统一管理多模型提供商实例的生命周期，支持懒加载、运行时切换、抽象工厂
 """
 import logging
-from typing import Dict, Optional, Any
+from typing import Dict, Optional
 
 from provider import BaseProvider
 from provider.openai_provider import OpenAIProvider

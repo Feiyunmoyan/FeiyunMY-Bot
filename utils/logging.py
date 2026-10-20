@@ -7,7 +7,6 @@
 import os
 import logging
 from logging.handlers import RotatingFileHandler
-from typing import Optional
 
 # 日志目录
 LOG_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "logs")
@@ -125,7 +124,6 @@ import os
 import json
 import logging
 from datetime import datetime
-from typing import Dict, Any
 
 logger = logging.getLogger(__name__)
 

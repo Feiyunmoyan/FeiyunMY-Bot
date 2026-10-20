@@ -5,7 +5,7 @@ MCP 服务器管理
 import os
 import json
 import logging
-from typing import List, Dict, Optional
+from typing import List, Optional
 
 logger = logging.getLogger(__name__)
 
