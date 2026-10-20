@@ -2,7 +2,6 @@
 Agent 执行器
 统一管理所有 Agent 执行逻辑：消息组装、工具调用、流式输出、上下文管理
 """
-import json
 import logging
 import asyncio
 import time
@@ -13,6 +12,7 @@ from provider.openai_provider import OpenAIProvider
 from agent.conversation_store import ConversationContext
 from agent.context_builder import ContextBuilderMixin
 from agent.context_compressor import ContextManager
+from agent.tool_exec import ToolExecMixin
 from agent.provider_select import ProviderSelectMixin
 from memory import MemoryBridge
 from persona.manager import PersonaManager
@@ -54,7 +54,7 @@ DEFAULT_COMPRESS_PROMPT = (
 )
 
 
-class AgentRunner(ContextBuilderMixin, ProviderSelectMixin):
+class AgentRunner(ToolExecMixin, ContextBuilderMixin, ProviderSelectMixin):
     """Agent 执行器"""
 
     def __init__(
@@ -235,16 +235,7 @@ class AgentRunner(ContextBuilderMixin, ProviderSelectMixin):
                 final_reply = content
                 break
 
-            async def exec_one(tc):
-                name = tc.get("function", {}).get("name", "")
-                try:
-                    args = json.loads(tc.get("function", {}).get("arguments", "{}"))
-                except json.JSONDecodeError:
-                    args = {}
-                r = await self.tool_registry.execute(name, args)
-                return tc, name, args, r
-
-            results = await asyncio.gather(*[exec_one(tc) for tc in tcs])
+            results = await self._exec_tool_calls(tcs)
             for tc, name, args, result in results:
                 tools_used.append({"name": name, "args": args, "result": str(result)[:200]})
                 messages.append({"role": "tool", "tool_call_id": tc.get("id", ""), "content": str(result)})
@@ -380,16 +371,7 @@ class AgentRunner(ContextBuilderMixin, ProviderSelectMixin):
                 final_reasoning = round_reasoning
                 break
 
-            async def exec_one(tc):
-                name = tc.get("function", {}).get("name", "")
-                try:
-                    args = json.loads(tc.get("function", {}).get("arguments", "{}"))
-                except json.JSONDecodeError:
-                    args = {}
-                r = await self.tool_registry.execute(name, args)
-                return tc, name, args, r
-
-            exec_results = await asyncio.gather(*[exec_one(tc) for tc in round_tc])
+            exec_results = await self._exec_tool_calls(round_tc)
             for tc, name, args, result in exec_results:
                 all_tools_used.append({"name": name, "args": args})
                 messages.append({"role": "tool", "tool_call_id": tc.get("id", ""), "content": str(result)})
