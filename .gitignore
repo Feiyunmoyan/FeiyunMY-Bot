@@ -15,7 +15,9 @@ data/
 logs/
 *.log
 
-# ===== 调试残渣 =====
+# ===== 临时脚本 / 调试残渣 =====
+_scratch/
+*.scratch.py
 db_check.txt
 pip_st_log.txt
 *_check.txt
