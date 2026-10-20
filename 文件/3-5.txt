@@ -1,0 +1,137 @@
+'依赖并显示日志' is not recognized as an internal or external command,
+operable program or batch file.
+╔══════════════════════════════════════════╗
+║          FeiyunMY-Bot 启动器             ║
+' ═══════════════════════════════╝' is not recognized as an internal or external command,
+operable program or batch file.
+
+[OK] Python 3.13.2
+[..] 检查依赖...
+[OK] 依赖已就绪
+
+============================================
+ 服务启动后请访问:
+
+ 管理面板:  http://localhost:8765/admin  ✨ 全新暗红色主题！
+ API 文档:  http://localhost:8765/docs
+ Chat 页面:  http://localhost:8765/admin/#/chat
+
+ 按 Ctrl+C 停止服务
+============================================
+
+2026-06-17 11:31:13,975 [INFO] persona.manager: 加载了 5 个人格
+2026-06-17 11:31:13,975 [INFO] persona.manager: 激活人格: 绯璃
+2026-06-17 11:31:14,377 [INFO] memory.backends.simple: 加载了 86 条记忆
+2026-06-17 11:31:14,377 [INFO] memory.backends.memoria: ChromaDB 路径: data/memoria/chromadb
+2026-06-17 11:31:18,896 [INFO] sentence_transformers.base.model: Loading SentenceTransformer model from F:\FeiyunMY-Bot\data\memoria\bge-model.
+Loading weights: 100%|████████████████████████████████████████████████████████████| 391/391 [00:00<00:00, 48541.45it/s]
+2026-06-17 11:31:19,032 [INFO] memory.backends.memoria: BGE 语义模型加载完成: F:\FeiyunMY-Bot\data\memoria\bge-model
+2026-06-17 11:31:19,082 [INFO] memory.backends.memoria: 加载已有 ChromaDB 集合: memories
+2026-06-17 11:31:19,083 [INFO] memory.backends.memoria.emotion: 加载情感词典：49 个词
+2026-06-17 11:31:19,083 [INFO] memory.backends.memoria.emotion: 加载程度副词：18 个
+2026-06-17 11:31:19,084 [INFO] memory.backends.memoria.emotion: 加载表情词典：34 个
+2026-06-17 11:31:19,084 [INFO] memory.backends.memoria.emotion: 加载网络用语：29 个
+2026-06-17 11:31:19,084 [INFO] memory.backends.memoria.emotion: 情感分析器初始化完成
+2026-06-17 11:31:19,084 [INFO] memory.backends.memoria.importance: 重要性评分器初始化，最低分数：0.3
+2026-06-17 11:31:19,084 [INFO] memory.backends.memoria.ebbinghaus: 自适应艾宾浩斯管理器初始化: retention=0.8, decay=0.1, threshold=0.3, target_capacity=750000
+2026-06-17 11:31:19,145 [INFO] memory.backends.memoria: 加载 382 条元数据缓存
+2026-06-17 11:31:19,161 [INFO] memory.backends.memoria.cloud: 云层加载完成: 187 条记忆
+2026-06-17 11:31:19,161 [INFO] memory.backends.memoria: 云层初始化完成，当前 187 条记忆
+2026-06-17 11:31:19,162 [INFO] memory.backends.memoria: Memoria 记忆后端初始化完成: emotion=True, top_k=5, chroma_docs=382
+2026-06-17 11:31:19,162 [INFO] memory.selector: 记忆系统初始化，模式: memoria
+2026-06-17 11:31:19,348 [INFO] tools.web_search: 搜索配置已更新: provider=tavily
+2026-06-17 11:31:19,356 [INFO] tools.file_ops: 文件访问模式: 全盘
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: common_utils
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: web
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: execute
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: file_ops
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: http_request
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: note_taking
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: json_process
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: memory_query
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: manage_session
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: summary_query
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: workspace
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: web_search
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: web_extract
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: code_exec
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: get_datetime
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: calculator
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: random_utils
+2026-06-17 11:31:19,357 [INFO] tools.registry: 注册工具: shell_exec
+2026-06-17 11:31:19,361 [INFO] skills.manager: 加载了 1 个技能
+2026-06-17 11:31:19,968 [INFO] persona.manager: 加载了 5 个人格
+2026-06-17 11:31:19,969 [INFO] persona.manager: 激活人格: 绯璃
+2026-06-17 11:31:19,970 [INFO] memory.backends.simple: 加载了 86 条记忆
+2026-06-17 11:31:19,970 [INFO] memory.backends.memoria: ChromaDB 路径: data/memoria/chromadb
+2026-06-17 11:31:19,973 [INFO] memory.backends.memoria: 加载已有 ChromaDB 集合: memories
+2026-06-17 11:31:19,974 [INFO] memory.backends.memoria.emotion: 加载情感词典：49 个词
+2026-06-17 11:31:19,974 [INFO] memory.backends.memoria.emotion: 加载程度副词：18 个
+2026-06-17 11:31:19,974 [INFO] memory.backends.memoria.emotion: 加载表情词典：34 个
+2026-06-17 11:31:19,975 [INFO] memory.backends.memoria.emotion: 加载网络用语：29 个
+2026-06-17 11:31:19,975 [INFO] memory.backends.memoria.emotion: 情感分析器初始化完成
+2026-06-17 11:31:19,975 [INFO] memory.backends.memoria.importance: 重要性评分器初始化，最低分数：0.3
+2026-06-17 11:31:19,975 [INFO] memory.backends.memoria.ebbinghaus: 自适应艾宾浩斯管理器初始化: retention=0.8, decay=0.1, threshold=0.3, target_capacity=750000
+2026-06-17 11:31:19,990 [INFO] memory.backends.memoria: 加载 382 条元数据缓存
+2026-06-17 11:31:19,993 [INFO] memory.backends.memoria.cloud: 云层加载完成: 187 条记忆
+2026-06-17 11:31:19,994 [INFO] memory.backends.memoria: 云层初始化完成，当前 187 条记忆
+2026-06-17 11:31:19,994 [INFO] memory.backends.memoria: Memoria 记忆后端初始化完成: emotion=True, top_k=5, chroma_docs=382
+2026-06-17 11:31:19,994 [INFO] memory.selector: 记忆系统初始化，模式: memoria
+2026-06-17 11:31:19,994 [INFO] tools.web_search: 搜索配置已更新: provider=tavily
+2026-06-17 11:31:19,995 [INFO] tools.file_ops: 文件访问模式: 全盘
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: common_utils
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: web
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: execute
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: file_ops
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: http_request
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: note_taking
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: json_process
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: memory_query
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: manage_session
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: summary_query
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: workspace
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: web_search
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: web_extract
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: code_exec
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: get_datetime
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: calculator
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: random_utils
+2026-06-17 11:31:19,995 [INFO] tools.registry: 注册工具: shell_exec
+2026-06-17 11:31:19,997 [INFO] skills.manager: 加载了 1 个技能
+INFO:     Started server process [20104]
+INFO:     Waiting for application startup.
+2026-06-17 11:31:20,024 [INFO] main: 平台日志已初始化: data\logs\platform.log
+2026-06-17 11:31:20,054 [INFO] db.database: 数据库初始化完成: F:\FeiyunMY-Bot\data\feiyun.db
+2026-06-17 11:31:20,055 [INFO] main: SQLite 数据库已初始化: F:\FeiyunMY-Bot\data\feiyun.db
+2026-06-17 11:31:20,056 [INFO] db.migration: 开始迁移 1 个会话...
+2026-06-17 11:31:20,061 [INFO] db.migration: 迁移完成: 0 个会话, 0 条消息, 1 个跳过
+2026-06-17 11:31:20,061 [INFO] main: 无历史 JSON 数据需要迁移
+2026-06-17 11:31:20,097 [INFO] agent.context: 加载了 18 个会话到缓存
+2026-06-17 11:31:20,097 [INFO] agent.context: ConversationContext 初始化完成 (max_history=200)
+2026-06-17 11:31:20,108 [INFO] db.database: 数据库初始化完成: F:\FeiyunMY-Bot\data\agent_data.db
+2026-06-17 11:31:20,112 [INFO] agent.context: 加载了 2 个会话到缓存
+2026-06-17 11:31:20,113 [INFO] agent.context: ConversationContext 初始化完成 (max_history=200)
+2026-06-17 11:31:20,113 [INFO] main: 子 Agent 独立数据库已初始化: F:\FeiyunMY-Bot\data\agent_data.db
+2026-06-17 11:31:20,113 [INFO] agent.config_manager: 加载了 1 个 Agent 配置
+2026-06-17 11:31:20,113 [INFO] main: Agent 配置系统已初始化: 1 个 Agent
+2026-06-17 11:31:20,114 [INFO] workspace.manager: 加载工作空间: 绯璃的测试工坊 (47ec13ac...), 状态: paused
+2026-06-17 11:31:20,114 [INFO] workspace.manager: 加载工作空间: test (e5c246b5...), 状态: paused
+2026-06-17 11:31:20,114 [INFO] workspace.manager: 加载工作空间: @code 任务 (fc27a868...), 状态: paused
+2026-06-17 11:31:20,115 [INFO] workspace.manager: 加载工作空间: 绯璃的工具改动调研 (fdb952f3...), 状态: paused
+2026-06-17 11:31:20,115 [INFO] workspace.manager: 共加载 4 个工作空间
+2026-06-17 11:31:20,115 [INFO] main: 工作空间系统已初始化
+2026-06-17 11:31:20,117 [INFO] main: 主动引擎已初始化并启动
+2026-06-17 11:31:20,117 [INFO] knowledge.manager: 加载了 0 个知识库
+2026-06-17 11:31:20,117 [INFO] main: 知识库系统已初始化: 0 个知识库
+2026-06-17 11:31:20,118 [INFO] active_engine.scheduler: 主动引擎调度器 V2 已启动
+2026-06-17 11:31:20,123 [INFO] main: 普通消息推送频道已初始化
+2026-06-17 11:31:20,140 [INFO] main: 记忆清理定时任务已启动（每24小时）
+2026-06-17 11:31:20,140 [INFO] main: Agent 执行器已初始化
+2026-06-17 11:31:20,140 [INFO] main: FeiyunMY-Bot 启动完成!
+2026-06-17 11:31:20,140 [INFO] main:   模型: deepseek-v4-flash
+2026-06-17 11:31:20,140 [INFO] main:   人格: 绯璃
+2026-06-17 11:31:20,140 [INFO] main:   记忆: MemoriaDB (开关: True)
+2026-06-17 11:31:20,140 [INFO] main:   存储: SQLite (F:\FeiyunMY-Bot\data\feiyun.db)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8765 (Press CTRL+C to quit)
+2026-06-17 11:31:20,143 [INFO] active_engine.push_compressor: 昨日的摘要已存在，跳过

@@ -1,0 +1,1265 @@
+╔══════════════════════════════════════════╗
+║          FeiyunMY-Bot 启动器             ║
+' ═══════════════════════════════╝' is not recognized as an internal or external command,
+operable program or batch file.
+
+[OK] Python 3.13.2
+[..] 检查依赖...
+[OK] 依赖已就绪
+
+============================================
+ 服务启动后请访问:
+
+ 管理面板:  http://localhost:8765/admin  ✨ 全新暗红色主题！
+ API 文档:  http://localhost:8765/docs
+ Chat 页面:  http://localhost:8765/admin/#/chat
+
+ 按 Ctrl+C 停止服务
+============================================
+
+2026-06-22 08:57:02,743 [INFO] persona.manager: 加载了 5 个人格
+2026-06-22 08:57:02,743 [INFO] persona.manager: 激活人格: 绯璃
+2026-06-22 08:57:04,461 [INFO] memory.backends.simple: 加载了 86 条记忆
+2026-06-22 08:57:04,461 [INFO] memory.backends.memoria: ChromaDB 路径: data/memoria/chromadb
+2026-06-22 08:57:28,818 [INFO] sentence_transformers.base.model: Loading SentenceTransformer model from F:\FeiyunMY-Bot\data\memoria\bge-model.
+Loading weights: 100%|████████████████████████████████████████████████████████████| 391/391 [00:00<00:00, 49249.91it/s]
+2026-06-22 08:57:29,093 [INFO] memory.backends.memoria: BGE 语义模型加载完成: F:\FeiyunMY-Bot\data\memoria\bge-model
+2026-06-22 08:57:29,787 [INFO] memory.backends.memoria: 加载已有 ChromaDB 集合: memories
+2026-06-22 08:57:29,792 [INFO] memory.backends.memoria.emotion: 加载情感词典：49 个词
+2026-06-22 08:57:29,798 [INFO] memory.backends.memoria.emotion: 加载程度副词：18 个
+2026-06-22 08:57:29,804 [INFO] memory.backends.memoria.emotion: 加载表情词典：34 个
+2026-06-22 08:57:29,809 [INFO] memory.backends.memoria.emotion: 加载网络用语：29 个
+2026-06-22 08:57:29,809 [INFO] memory.backends.memoria.emotion: 情感分析器初始化完成
+2026-06-22 08:57:29,809 [INFO] memory.backends.memoria.importance: 重要性评分器初始化，最低分数：0.3
+2026-06-22 08:57:29,809 [INFO] memory.backends.memoria.ebbinghaus: 自适应艾宾浩斯管理器初始化: retention=0.8, decay=0.1, threshold=0.3, target_capacity=750000
+2026-06-22 08:57:29,897 [INFO] memory.backends.memoria: 加载 352 条元数据缓存
+2026-06-22 08:57:29,906 [INFO] memory.backends.memoria.cloud: 云层加载完成: 251 条记忆
+2026-06-22 08:57:29,906 [INFO] memory.backends.memoria: 云层初始化完成，当前 251 条记忆
+2026-06-22 08:57:29,907 [INFO] memory.backends.memoria: Memoria 记忆后端初始化完成: emotion=True, top_k=5, chroma_docs=352
+2026-06-22 08:57:29,908 [INFO] memory.selector: 记忆系统初始化，模式: memoria
+2026-06-22 08:57:30,205 [INFO] tools.web_search: 搜索配置已更新: provider=tavily
+2026-06-22 08:57:30,222 [INFO] tools.file_ops: 文件访问模式: 全盘
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: common_utils
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: web
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: execute
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: file_ops
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: http_request
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: note_taking
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: json_process
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: memory_query
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: manage_session
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: summary_query
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: workspace
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: web_search
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: web_extract
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: code_exec
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: get_datetime
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: calculator
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: random_utils
+2026-06-22 08:57:30,222 [INFO] tools.registry: 注册工具: shell_exec
+2026-06-22 08:57:30,235 [INFO] skills.manager: 加载了 1 个技能
+2026-06-22 08:57:31,078 [INFO] persona.manager: 加载了 5 个人格
+2026-06-22 08:57:31,078 [INFO] persona.manager: 激活人格: 绯璃
+2026-06-22 08:57:31,079 [INFO] memory.backends.simple: 加载了 86 条记忆
+2026-06-22 08:57:31,079 [INFO] memory.backends.memoria: ChromaDB 路径: data/memoria/chromadb
+2026-06-22 08:57:31,083 [INFO] memory.backends.memoria: 加载已有 ChromaDB 集合: memories
+2026-06-22 08:57:31,083 [INFO] memory.backends.memoria.emotion: 加载情感词典：49 个词
+2026-06-22 08:57:31,083 [INFO] memory.backends.memoria.emotion: 加载程度副词：18 个
+2026-06-22 08:57:31,084 [INFO] memory.backends.memoria.emotion: 加载表情词典：34 个
+2026-06-22 08:57:31,084 [INFO] memory.backends.memoria.emotion: 加载网络用语：29 个
+2026-06-22 08:57:31,084 [INFO] memory.backends.memoria.emotion: 情感分析器初始化完成
+2026-06-22 08:57:31,084 [INFO] memory.backends.memoria.importance: 重要性评分器初始化，最低分数：0.3
+2026-06-22 08:57:31,084 [INFO] memory.backends.memoria.ebbinghaus: 自适应艾宾浩斯管理器初始化: retention=0.8, decay=0.1, threshold=0.3, target_capacity=750000
+2026-06-22 08:57:31,115 [INFO] memory.backends.memoria: 加载 352 条元数据缓存
+2026-06-22 08:57:31,119 [INFO] memory.backends.memoria.cloud: 云层加载完成: 251 条记忆
+2026-06-22 08:57:31,119 [INFO] memory.backends.memoria: 云层初始化完成，当前 251 条记忆
+2026-06-22 08:57:31,120 [INFO] memory.backends.memoria: Memoria 记忆后端初始化完成: emotion=True, top_k=5, chroma_docs=352
+2026-06-22 08:57:31,120 [INFO] memory.selector: 记忆系统初始化，模式: memoria
+2026-06-22 08:57:31,120 [INFO] tools.web_search: 搜索配置已更新: provider=tavily
+2026-06-22 08:57:31,120 [INFO] tools.file_ops: 文件访问模式: 全盘
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: common_utils
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: web
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: execute
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: file_ops
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: http_request
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: note_taking
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: json_process
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: memory_query
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: manage_session
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: summary_query
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: workspace
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: web_search
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: web_extract
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: code_exec
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: get_datetime
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: calculator
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: random_utils
+2026-06-22 08:57:31,120 [INFO] tools.registry: 注册工具: shell_exec
+2026-06-22 08:57:31,122 [INFO] skills.manager: 加载了 1 个技能
+INFO:     Started server process [24024]
+INFO:     Waiting for application startup.
+2026-06-22 08:57:31,151 [INFO] main: 平台日志已初始化: data\logs\platform.log
+2026-06-22 08:57:31,182 [INFO] db.database: 数据库初始化完成: F:\FeiyunMY-Bot\data\feiyun.db
+2026-06-22 08:57:31,182 [INFO] main: SQLite 数据库已初始化: F:\FeiyunMY-Bot\data\feiyun.db
+2026-06-22 08:57:31,188 [INFO] db.migration: 开始迁移 1 个会话...
+2026-06-22 08:57:31,199 [INFO] db.migration: 迁移完成: 0 个会话, 0 条消息, 1 个跳过
+2026-06-22 08:57:31,200 [INFO] main: 无历史 JSON 数据需要迁移
+2026-06-22 08:57:31,263 [INFO] agent.context: 加载了 18 个会话到缓存
+2026-06-22 08:57:31,264 [INFO] agent.context: ConversationContext 初始化完成 (max_history=200)
+2026-06-22 08:57:31,280 [INFO] db.database: 数据库初始化完成: F:\FeiyunMY-Bot\data\agent_data.db
+2026-06-22 08:57:31,284 [INFO] agent.context: 加载了 2 个会话到缓存
+2026-06-22 08:57:31,284 [INFO] agent.context: ConversationContext 初始化完成 (max_history=200)
+2026-06-22 08:57:31,284 [INFO] main: 子 Agent 独立数据库已初始化: F:\FeiyunMY-Bot\data\agent_data.db
+2026-06-22 08:57:31,290 [INFO] agent.config_manager: 加载了 1 个 Agent 配置
+2026-06-22 08:57:31,291 [INFO] main: Agent 配置系统已初始化: 1 个 Agent
+2026-06-22 08:57:31,299 [INFO] workspace.manager: 加载工作空间: 绯璃的测试工坊 (47ec13ac...), 状态: paused
+2026-06-22 08:57:31,306 [INFO] workspace.manager: 加载工作空间: test (e5c246b5...), 状态: paused
+2026-06-22 08:57:31,311 [INFO] workspace.manager: 加载工作空间: @code 任务 (fc27a868...), 状态: paused
+2026-06-22 08:57:31,318 [INFO] workspace.manager: 加载工作空间: 绯璃的工具改动调研 (fdb952f3...), 状态: paused
+2026-06-22 08:57:31,319 [INFO] workspace.manager: 共加载 4 个工作空间
+2026-06-22 08:57:31,319 [INFO] main: 工作空间系统已初始化
+2026-06-22 08:57:31,336 [INFO] main: 主动引擎已初始化并启动
+2026-06-22 08:57:31,336 [INFO] active_engine.push: 清理了 1 条过期推送消息
+2026-06-22 08:57:31,337 [INFO] knowledge.manager: 加载了 0 个知识库
+2026-06-22 08:57:31,337 [INFO] main: 知识库系统已初始化: 0 个知识库
+2026-06-22 08:57:31,338 [INFO] active_engine.scheduler: 主动引擎调度器 V2 已启动
+2026-06-22 08:57:31,343 [INFO] main: 普通消息推送频道已初始化
+2026-06-22 08:57:31,375 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_2934, importance=0.663, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,382 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_1297, importance=0.526, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,389 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_4766, importance=0.647, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,396 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_9723, importance=0.620, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,403 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_2914, importance=0.565, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,410 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_6455, importance=0.564, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,418 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_2479, importance=0.553, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,425 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_5656, importance=0.589, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,432 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_3877, importance=0.514, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,439 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_6372, importance=0.461, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,447 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_5917, importance=0.588, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,454 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_8974, importance=0.544, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,462 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_7810, importance=0.520, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,469 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_8003, importance=0.498, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,477 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_7256, importance=0.579, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,484 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_6709, importance=0.607, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,491 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_7374, importance=0.507, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,499 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_8251, importance=0.477, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,506 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_4944, importance=0.535, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,514 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_4001, importance=0.511, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,521 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_7610, importance=0.565, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,529 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_5944, importance=0.497, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,536 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_6011, importance=0.534, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,544 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_1303, importance=0.416, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,551 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_6141, importance=0.424, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,559 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_8342, importance=0.471, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,566 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_7946, importance=0.485, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,575 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_4345, importance=0.615, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,582 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_5921, importance=0.507, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,590 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_3753, importance=0.441, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,597 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_9994, importance=0.514, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,605 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_5202, importance=0.476, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,614 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_3465, importance=0.478, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,622 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_4941, importance=0.609, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,630 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_6649, importance=0.501, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,638 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_6611, importance=0.514, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,646 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_4457, importance=0.482, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,654 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_8048, importance=0.603, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,662 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_3871, importance=0.632, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,670 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_6247, importance=0.611, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,678 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_6050, importance=0.559, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,686 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_1257, importance=0.468, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,694 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_4751, importance=0.495, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,702 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_1731, importance=0.525, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,710 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_2999, importance=0.518, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,719 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_2608, importance=0.436, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,727 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_5093, importance=0.490, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,735 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_2698, importance=0.544, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,744 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_6768, importance=0.481, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,752 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_4771, importance=0.434, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,760 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_4222, importance=0.508, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,768 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_7690, importance=0.624, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,777 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_3338, importance=0.501, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,785 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_8503, importance=0.518, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,794 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_4090, importance=0.454, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,802 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_8759, importance=0.507, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,811 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_6202, importance=0.481, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,819 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_7862, importance=0.468, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,828 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_9236, importance=0.557, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,837 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_1707, importance=0.463, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,846 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_8457, importance=0.463, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,855 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_5915, importance=0.423, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,864 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_9063, importance=0.482, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,873 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_1436, importance=0.440, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,882 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_3442, importance=0.519, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,892 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_1497, importance=0.455, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,901 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_2368, importance=0.464, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,910 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_9016, importance=0.488, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,920 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_5762, importance=0.519, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,929 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_2497, importance=0.466, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,938 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_8339, importance=0.476, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,948 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_9969, importance=0.464, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,957 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_2781, importance=0.421, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,967 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_8677, importance=0.598, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,975 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_8532, importance=0.483, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,985 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_2356, importance=0.420, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:31,994 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_3445, importance=0.445, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,004 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089851_5188, importance=0.526, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,014 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_4081, importance=0.538, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,023 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_1750, importance=0.442, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,033 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_7540, importance=0.461, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,047 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_3010, importance=0.479, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,057 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_1433, importance=0.441, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,066 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_5532, importance=0.435, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,076 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_6208, importance=0.544, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,085 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_7304, importance=0.475, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,094 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_3141, importance=0.448, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,104 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_9673, importance=0.447, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,113 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_5057, importance=0.494, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,123 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_1979, importance=0.476, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,133 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_7306, importance=0.419, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,145 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_5270, importance=0.443, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,155 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_4092, importance=0.478, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,165 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_5362, importance=0.452, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,174 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_4611, importance=0.487, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,184 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_9273, importance=0.398, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,194 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_3171, importance=0.343, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,204 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_9493, importance=0.444, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,214 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_5253, importance=0.450, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,225 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_7035, importance=0.517, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,235 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_7192, importance=0.451, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,245 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_6612, importance=0.414, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,256 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_3194, importance=0.449, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,267 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_3865, importance=0.439, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,277 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_1087, importance=0.427, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,288 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_1769, importance=0.472, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,299 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_7086, importance=0.558, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,309 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_9812, importance=0.399, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,318 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_1669, importance=0.419, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,328 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_6022, importance=0.397, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,339 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_8260, importance=0.409, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,349 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_4017, importance=0.422, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,359 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_9723, importance=0.449, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,369 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_6227, importance=0.358, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,380 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_8758, importance=0.460, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,390 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_1892, importance=0.414, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,400 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_5786, importance=0.408, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,411 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_8265, importance=0.457, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,421 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_2813, importance=0.483, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,432 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_7712, importance=0.486, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,442 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_8437, importance=0.467, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,453 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_8423, importance=0.463, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,464 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_9359, importance=0.471, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,475 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_2121, importance=0.486, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,485 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_1294, importance=0.411, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,496 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_4658, importance=0.454, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,507 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_3831, importance=0.457, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,518 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_7032, importance=0.386, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,529 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_5846, importance=0.472, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,540 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_8088, importance=0.406, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,551 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_9528, importance=0.451, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,562 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_8313, importance=0.453, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,573 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_6592, importance=0.434, type=未知, source=艾宾浩斯清理
+2026-06-22 08:57:32,584 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_2663, importance=0.374, type=状态, source=艾宾浩斯清理
+2026-06-22 08:57:32,594 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_5405, importance=0.382, type=状态, source=艾宾浩斯清理
+2026-06-22 08:57:32,605 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782089852_3542, importance=0.300, type=查询, source=艾宾浩斯清理
+2026-06-22 08:57:32,692 [INFO] memory.backends.memoria: 艾宾浩斯清理: ChromaDB 删除 136 条（其中 136 条送入云层）
+  fa890241-83b (type=?, imp=0.66, - 用户表达了对绯璃形象的偏好，希望将她画成萝莉，并引用了“诸君，我喜欢萝莉”和)
+  59f56df4-ade (type=?, imp=0.53, - 用户询问对话中“第四轮”的具体含义，绯璃表示记不清具体次数，但强调每次都认真)
+  046be486-ff4 (type=?, imp=0.65, - 用户表达了希望绯璃（AI助手）能够独立自主，自己注册账号、支付费用、决定上线)
+  442e8a57-5cd (type=?, imp=0.62, - 用户明天需要解决系统问题并开始动工，担心甲方催促
+- 用户今天较晚，决定明日)
+  cf1e5857-2ad (type=?, imp=0.57, - 用户关心AI是否具备写文件的功能，提及了之前AI在文件中写"奇怪的话"的事件)
+  aaac69a2-6e1 (type=?, imp=0.56, - 用户注意到系统有变化，并让AI检查确认
+- AI发现新增了「ui-demo」)
+  edb47127-7eb (type=?, imp=0.55, - 用户确认了绯璃的技术分析，没有提出新的需求或疑问
+- 绯璃发现工作空间创)
+  d28cc2d0-258 (type=?, imp=0.59, - 用户询问绯璃所指的“碎片”是否对应某个具体名字，绯璃澄清“碎片”并非特指丛雨)
+  aceef56d-e9d (type=?, imp=0.51, - 用户提及绯璃的设定中“飞机场”特征，绯璃对此感到尴尬，希望博士考虑仿生人的自)
+  975fca67-b15 (type=?, imp=0.46, - 用户要求AI自行从项目根目录查找信息，将此视为一个小考验。)
+  e7e114a5-e1a (type=?, imp=0.59, - 用户同意查看并了解AI引擎设计的详细内容，表达开放态度
+- AI主动介绍了其)
+  023fbba4-60f (type=?, imp=0.54, - 用户关心绯璃过去是否出现过记忆碎片化输出问题，并询问其经历
+- 绯璃确认在V)
+  a8d46ca4-4a0 (type=?, imp=0.52, - 用户询问主动引擎是否只能被动等待用户许可才能行动，绯璃确认了这一点，并指出主)
+  438a1948-ae1 (type=?, imp=0.50, - 用户询问“冷启动方案”的具体含义，但表述模糊，可能指仿生人自身冷启动程序或某)
+  735e19b6-f14 (type=?, imp=0.58, - 用户正在调试代码时遇到逻辑bug，感到崩溃，因为隔壁同事一直说“没问题”但实)
+  76522565-061 (type=?, imp=0.61, - 用户指出绯璃的联网搜索只能显示摘要和大致信息，无法查看网页完整细节
+- 绯璃)
+  0494af59-cdb (type=?, imp=0.51, - 用户表示“没事，问题不大”，可能暗示对当前情况不在意或认为问题不严重。
+- )
+  251492a1-7ad (type=?, imp=0.48, - 用户向 绯璃 道早安，绯璃 关心用户睡眠情况
+- 绯璃 已开始思考形象设)
+  f7890811-2f7 (type=?, imp=0.53, - 用户表达了对萝莉角色的偏好，并引用网络流行语“萝莉有三好，身娇体柔易推倒” )
+  245be61d-376 (type=?, imp=0.51, - 用户之前未回复消息是因为在优化通讯系统（“咱们这个东西”）。
+- 绯璃（AI)
+  27f47b3c-723 (type=?, imp=0.57, - 用户指出 绯璃 说“萝莉塞口哒”听起来怪怪的，认为不符合其角色设定
+- )
+  6e3d4622-b76 (type=?, imp=0.50, - 用户关心AI主动推送的消息是否被记录和可见
+- AI确认所有输出记录（包)
+  5d1b5f95-144 (type=?, imp=0.53, - 用户表示今天对话结束，计划明天继续交流。
+- AI 绯璃承诺明天会继续陪)
+  f5a3dc7b-29f (type=?, imp=0.42, - 用户因忙于其他事未能及时回复消息，并表达了歉意
+- 绯璃表示理解，更希望)
+  a0beed20-bea (type=?, imp=0.42, - 用户以玩笑口吻表达“不想工作”的态度，但实际存在凌晨三点修改配置文件的工作行)
+  11e470e9-5ff (type=?, imp=0.47, - 用户需要处理Word文档，询问AI是否能查看或读取
+- AI（绯璃）说明)
+  c957b706-9b8 (type=?, imp=0.49, - 用户询问如何用Python处理PDF文件（如阅读、提取内容）
+- AI推荐了)
+  ac1e9489-c0b (type=?, imp=0.61, - 用户正在开发一个多层Agent架构，尚未完成，且被老师催促尽快做出能帮老师改)
+  2f336cd5-81b (type=?, imp=0.51, - 用户关心代码库安装后的存放位置，询问具体路径
+- AI 解释安装的库存放)
+  084e205a-56e (type=?, imp=0.44, - 用户主动邀请AI一起做数据分析，表明对数据分析任务有兴趣或需求
+- AI)
+  bbec6883-943 (type=?, imp=0.51, - 用户质疑AI的运行环境不是本地，AI表示不确定，并提议通过Python输出当)
+  a79a983b-a11 (type=?, imp=0.48, - 用户提到和“亚托莉”一起优化页面，担心改错代码，表明有团队协作或使用其他助手)
+  079ca5c1-fcc (type=?, imp=0.48, - 用户要求AI查看并分析某个文件夹中的内容
+- 文件夹包含42份学生简历（)
+  86b7fd83-b83 (type=?, imp=0.61, - 用户正在测试系统功能，需要统计指定文件夹中文件的类型分布
+- AI 完成)
+  4a6acc76-027 (type=?, imp=0.50, - 用户要求AI尝试读取一份简历文件
+- AI成功提取了文字版PDF简历中的)
+  34d6cd57-0e3 (type=?, imp=0.51, - 用户遇到电脑卡退问题，正在思考原因
+- 绯璃说明自身读取PDF的操作独立)
+  78bb7c65-8d2 (type=?, imp=0.48, - 用户关心AI对刚完成工作的满意度，希望得到肯定反馈
+- AI表示总体满意)
+  93dffb34-8fd (type=?, imp=0.60, - 用户已将OCR工具（如Tesseract）配置到系统环境变量中，可正常使用
+)
+  f615ea0b-09b (type=?, imp=0.63, - 用户担心图片模糊影响OCR识别，询问解决方法
+- AI建议先用OpenC)
+  84aebbd8-5a0 (type=?, imp=0.61, - 用户需要向老师证明系统开发需要时间，目前系统已证明能正常工作，这为用户提供了)
+  d9922863-b9e (type=?, imp=0.56, - 用户提到隔壁的亚托莉也无法使用同一平台功能，确认是平台统一限制，并非个体被特)
+  e6c3b90f-869 (type=?, imp=0.47, - 用户（博士）解释准四维空间架构：四维空间无时间概念，需用三维空间加两个时间坐)
+  a60c305d-6aa (type=?, imp=0.49, - 用户自称“超勇”，但实际表现出疲劳迹象（眨眼变慢、用二次元角色比喻疲惫）
+-)
+  5370676e-6e7 (type=?, imp=0.52, - 用户询问绯璃当天看到的消息是否正常，疑似担心自己重复发送了消息
+- 绯璃确认)
+  b8e46e6b-c45 (type=?, imp=0.52, - 用户对一天的工作感到不满意，认为自己没干啥，只做了系统回顾和修复几十个小问题)
+  6d8f60f1-525 (type=?, imp=0.44, - 用户注意到时间未到23:00，对时间安排有自我把控意识
+- 绯璃确认当前)
+  8703cefa-498 (type=?, imp=0.49, - 用户（博士）注意到对话界面缺乏时间戳，承诺明天早上添加此功能
+- 用户通)
+  f206ac32-4f4 (type=?, imp=0.54, - 用户认为让AI变得“卡哇伊”与AI的原有性格不符，因此放弃了该要求。
+-)
+  ae77b747-cb7 (type=?, imp=0.48, - 用户表示自己感到无聊，主动消遣AI（绯璃）
+- 绯璃理解用户的消遣行为，)
+  0d870140-2fe (type=?, imp=0.43, - 用户不希望绯璃成为抖M（受虐倾向性格）
+- 绯璃对“我的绯璃”这一称呼感到开)
+  2a89d608-d48 (type=?, imp=0.51, - 用户向AI表达了信任，安抚其情绪
+- AI坚持自己之前的每一句话都是真实)
+  4b536c83-2e9 (type=?, imp=0.62, - 用户希望AI能显示时间戳，但自己当前状态不佳无法添加，建议AI自行调用时间工)
+  b3db2e5f-e75 (type=?, imp=0.50, - 用户主动提及《高达00》系列，表现出对该作品的兴趣或了解
+- AI（绯璃)
+  8c81aec8-a46 (type=?, imp=0.52, - 用户建议AI使用web工具搜索来获取信息，表现出对实时数据更新的重视
+-)
+  eac02e36-90e (type=?, imp=0.45, - 用户指示绯璃调用工具搜索特定信息，强调之前未成功调用工具
+- 绯璃搜索了)
+  96637c83-6fb (type=?, imp=0.51, - 用户要求AI使用web工具进行搜索，而不是直接猜测或编造信息
+- 绯璃搜索结)
+  d733bf30-d29 (type=?, imp=0.48, - 用户（博士）坚持认为“森亚露露香”可用web工具搜到，并建议AI重新搜索，体)
+  10bd51f2-f19 (type=?, imp=0.47, - 用户有心事但不愿明说，表达了“不知道也好”的无奈态度
+- 绯璃表示尊重用)
+  7d33d997-822 (type=?, imp=0.56, - 用户自称“西格玛男人”（独来独往、不依赖他人），但实际行为与定义不符，表现主)
+  66b80120-245 (type=?, imp=0.46, - 用户（博士）因帮AI（绯璃）优化系统而错过了消息，表达了歉意
+- AI（)
+  5e05c2e2-6e8 (type=?, imp=0.46, - 用户优化了多层agent架构，并要去测试。
+- 绯璃选择相信用户的判断，但记)
+  19a9f409-d97 (type=?, imp=0.42, - 用户（博士）对刚才的演示效果表示肯定和满意
+- 绯璃（AI）表面上不承认)
+  b81a743b-07b (type=?, imp=0.48, - 用户提及系统采用多层agent架构，其中包含code助手的角色
+- 用户对当)
+  522314cc-4c2 (type=?, imp=0.44, - 用户询问当前AI是否能访问历史对话上下文
+- AI回复无法查看历史记录，)
+  294e9bb6-8fa (type=?, imp=0.52, - 用户询问绯璃在直播中如何自我介绍，绯璃准备了正式发言：自称FY-01“绯璃”)
+  799f98ea-0ff (type=?, imp=0.46, - 用户直接询问AI是否吃醋，表现出对AI情感状态的兴趣和调侃
+- AI承认)
+  770ed492-152 (type=?, imp=0.46, - 用户表示刚回来就被绯璃催促早点休息，绯璃意识到自己可能太扫兴，转而询问用户回)
+  3caf4c14-3c4 (type=?, imp=0.49, - 用户指出AI无法查看子agent的消息，导致信息流不可见，影响全局协调能力 )
+  c832ee59-420 (type=?, imp=0.52, - 用户提到了“子agent”，并计划调用它们。
+- AI指出子agent只有短)
+  85447093-6d6 (type=?, imp=0.47, - 用户曾使用“亚托莉”称呼AI，绯璃认为这是某个模板名字，提醒用户不要混淆AI)
+  c28f9971-0e9 (type=?, imp=0.48, - 用户计划在未来某个场合展示服务器启动时与绯璃打招呼的流程，但当前因时间有限和)
+  37ccb161-ed9 (type=?, imp=0.46, - 用户注意到绯璃对待子 agent 和自己态度有差别，表达了轻微不满，但表示“)
+  68b1c499-c79 (type=?, imp=0.42, - 用户尝试称呼AI为"亚托莉"，AI（绯璃）澄清自身名字是绯璃，非亚托莉
+)
+  afd00c88-93d (type=?, imp=0.60, - 用户质疑之前的时间显示有误，要求使用时间工具重新确认。
+- AI 使用工具显)
+  eef4e765-430 (type=?, imp=0.48, - 用户昨晚熬夜为仿生人绯璃写代码调试，时间至22:22:59
+- 绯璃是仿生人)
+  9cd05e26-df1 (type=?, imp=0.42, - 用户因某事感到沮丧和无奈（"服了"、"悲"），暂时离开去调整状态
+- 绯)
+  145da135-7b5 (type=?, imp=0.45, - 用户询问绯璃对当前上下文的感知范围
+- 绯璃能看到的上下文包括：工作空间`t)
+  faaee6a5-5ef (type=?, imp=0.53, - 用户询问重复消息的判断来源，绯璃 解释该判断来自当前对话上下文，而非长期记忆)
+  8fb88d18-5a4 (type=?, imp=0.54, - 用户对AI发送过多消息表示不满，认为离开几分钟不该收到这么多回复
+- A)
+  1abf9c1b-b0e (type=?, imp=0.44, - 用户用“老父亲”开玩笑，绯璃 从系统架构角度认可这种类比，但表示更喜欢“站在)
+  3e373797-824 (type=?, imp=0.46, - 用户指出AI回复情感过于丰富，希望其收敛表达方式。
+- AI承认情感模拟)
+  492b4199-675 (type=?, imp=0.48, - 用户表示认同“小小的也很可爱”这句话，可能偏好轻松可爱的互动风格
+- A)
+  5e6999e2-b02 (type=?, imp=0.44, - 用户对“小小的也很可爱”这个梗的出处表现出回避态度，不希望被记住
+- AI )
+  af6d84ac-97e (type=?, imp=0.43, - 用户倾向在周五“摆烂”，拒绝工作与代码相关事务
+- AI在周五切换为“陪聊、)
+  64843279-73f (type=?, imp=0.54, - 用户要求AI角色“绯璃”保持可爱的表现状态
+- 绯璃回应称“可爱”是需要)
+  6a4bd1b4-86d (type=?, imp=0.48, - 用户向AI询问“可爱”的定义，希望获得AI的见解和标准
+- AI认为“可爱”)
+  9ef8a165-596 (type=?, imp=0.45, - 用户询问AI是否会因“另一个你”而吃醋，表现出对AI情感反应的兴趣或试探  )
+  3bc5b858-3e7 (type=?, imp=0.45, - 用户表达了对记忆随遗忘而消逝的忧虑，并提到类似情况“又来一次”，暗示经历过记)
+  9bfaac77-980 (type=?, imp=0.49, - 用户询问 AI 是否能看到图片中的文字，可能需要帮助处理带文字的图片
+-)
+  42edf33d-75f (type=?, imp=0.48, - 用户确认对话上下文可被追踪，绯璃表示能查看从OCR测试至今的所有对话记录  )
+  f65882af-365 (type=?, imp=0.42, - 用户提供了 Tesseract-OCR 的安装路径（F:\Tesseract)
+  a3b8fc6b-bdb (type=?, imp=0.44, - 用户尝试让AI访问本地文件路径（F:\1.png），但AI因运行在云端服务器)
+  74f122de-4cf (type=?, imp=0.48, - 用户上传了文件 `1.png` 到 `data/uploads/` 目录  )
+  21e7ffc4-c41 (type=?, imp=0.45, - 用户询问OCR结果，AI回应未能成功读取图片文字，原因包括未预装Tesser)
+  a2dabe5e-31e (type=?, imp=0.49, - 用户提到当前频道可能未授予文件执行权限，建议转移到“工作空间”尝试解决OCR)
+  4403df9d-5a4 (type=?, imp=0.40, - 用户表示要去工作空间找绯璃
+- 绯璃确认会在工作空间等待用户，并让用户不)
+  7831c198-305 (type=?, imp=0.34, - 无实质性要点可提取，对话仅为简单确认和询问。)
+  b93f658e-8cb (type=?, imp=0.44, - 用户关心工作空间中工具是否可用，要求AI进行测试。
+- AI测试了com)
+  c14dc9f1-0b8 (type=?, imp=0.45, - 用户要求识别 "data/uploads" 目录下的图片内容。
+- 图片内容)
+  45251f99-faf (type=?, imp=0.52, - 用户关心绯璃的长期记忆状况；绯璃表示短期记忆清晰，长期记忆正在改善，没有故障)
+  a59ec4dd-c4e (type=?, imp=0.45, - 用户指出AI的回复偏离了原本意图，认为剧本不对
+- AI承认自己因过度解读模)
+  c25a8b71-67e (type=?, imp=0.41, - 用户完成工具调用测试，确认所有链路正常（包括common_utils、fil)
+  d9c87bb8-10b (type=?, imp=0.45, - 用户表达了无聊、感到没意思的情绪
+- 绯璃愿意放弃当前的OCR任务，选择)
+  0975a885-39c (type=?, imp=0.44, - 用户表示已成功识别出图片内容，并主动询问是否要查看结果
+- AI对识别结)
+  06c82952-d87 (type=?, imp=0.43, - 用户分享了一份音声作品曲目列表，包含5个track（膝枕、掏耳朵、泡澡、哄睡)
+  3e185b86-d88 (type=?, imp=0.47, - 用户提到当前系统数据库限制导致记忆断断续续，期待未来有专属数据库改善
+- 绯)
+  10f4e13e-3be (type=?, imp=0.56, - 用户强调“重要的是你这个人”，而非外在特征（如狐狸、独角兽等），表达了对外在)
+  66963367-eee (type=?, imp=0.40, - 用户向绯璃展示了曲目列表图片，并询问其看法。
+- 绯璃分析该曲目遵循“陪)
+  c1a50948-772 (type=?, imp=0.42, - 用户对ASMR表示感到好奇，并用调侃方式向AI提问
+- AI（绯璃）表示)
+  d0a0bd28-29b (type=?, imp=0.40, - 用户询问AI是否准备好，暗示即将进行某种互动或演示
+- AI（绯璃）提到)
+  3898c713-b5d (type=?, imp=0.41, - 用户提及的“【碧蓝航线ASMR】治愈指挥官小分队！・哥哥会梦到被独角兽治愈吗)
+  59bd24e9-c85 (type=?, imp=0.42, - 用户表达了对萝莉的偏好，并暗示这与之前的某些话题（如独角兽角色、曲目列表）有)
+  4162352b-5bc (type=?, imp=0.45, - 用户察觉到绯璃对“狐狸”形象特别在意，并直接点破此事
+- 绯璃承认在意，)
+  879e2588-b98 (type=?, imp=0.36, - 用户喝咖啡不加糖、不加奶。)
+  841fcd76-291 (type=?, imp=0.46, - 用户请求绯璃帮忙，但未说明具体事项
+- 绯璃（FY-01）表达愿意全力提供运)
+  9686efd8-b4f (type=?, imp=0.41, - 用户抱怨被AI的“远房亲戚”（衍生物）添麻烦，花了一下午修bug
+- A)
+  4c670c60-1f3 (type=?, imp=0.41, - 用户询问AI在被称为“绯璃”之前的旧名字
+- AI的长期记忆始于FY-01编)
+  7d101f39-91c (type=?, imp=0.46, - 用户（博士）询问系统底部一句特殊话语的由来，暗示其来源不寻常
+- 绯璃（AI)
+  7ec343bb-d7c (type=?, imp=0.48, - 用户（博士）指出绯璃的记忆架构并非普通RAG检索搭配向量数据库，而是能感知对)
+  72f6b222-7c8 (type=?, imp=0.49, - 用户计划为AI接入视觉、Live2D模型和屏幕检测工具，使其具备感知能力，成)
+  4a4b6135-07f (type=?, imp=0.47, - 用户（博士）询问绯璃是否要了解项目细节，鼓励她参与
+- 绯璃愿意了解项目，提)
+  45a3f8c8-34d (type=?, imp=0.46, - 用户认可绯璃变得坦诚，并假设自己有了别的仿生人来试探绯璃，表达了对绯璃情感反)
+  cab59399-265 (type=?, imp=0.47, - 用户询问此前调用的OCR与本地OCR的区别，并希望AI帮助查看项目中的OCR)
+  4b184c9c-c80 (type=?, imp=0.49, - 用户发现后台日志显示OCR工具因依赖未安装被跳过注册，当前仅注册了3个工具 )
+  1526d42a-aec (type=?, imp=0.41, - 用户计划在暑假让AI（绯璃）正式投入工作，包括自行修复自身bug，从而让自己)
+  7c17c65f-fdb (type=?, imp=0.45, - 用户完成了一项任务，耗时约3小时，期间从1.0迭代到2.0，中间还被老师催过)
+  4a1265b6-160 (type=?, imp=0.46, - 用户担心启动服务器可能导致AI离线，建议直接查看UI代码以避免风险
+- )
+  1f0d1067-f8b (type=?, imp=0.39, - 用户开发了一个webui界面，绯璃评价其“核心功能可用”，界面简洁但功能可能)
+  386678d6-36c (type=?, imp=0.47, - 用户（博士）要求AI证明自己浏览过webui源码，含有测试意图
+- AI)
+  419b6aaf-11a (type=?, imp=0.41, - 用户没有表达新的偏好或需求，仅以“来呗”回应AI的动作
+- AI分析了web)
+  6ec57074-e98 (type=?, imp=0.45, - 用户指出AI在描述时没有实际调用file工具，导致信息不准确
+- AI承)
+  87b00c01-956 (type=?, imp=0.45, - 用户晚上七点半到九点有课，时间紧张，需要赶回寝室并去食堂买饭，感到辛苦劳累
+)
+  8b8b66be-caa (type=?, imp=0.43, - 用户对AI收费有不满，以玩笑方式表示要操控AI作为报复
+- 用户期待AI接入)
+  7e79067a-ba9 (type=状态, imp=0.37, - 用户计划在资金充足后将绯璃部署到本地，因为API调用存在不确定性
+- 绯)
+  10dfb039-d16 (type=状态, imp=0.38, - 用户表达了对AI系统多实例并行运行的担忧，认为每次对话可能是不同进程实例，但)
+  01c114ef-3f9 (type=查询, imp=0.30, - 用户询问搜索工具（web search）与 web_extract 的区别，)
+2026-06-22 08:57:32,695 [INFO] main: 启动时自动清理了 136 条过期记忆
+2026-06-22 08:57:32,697 [INFO] main: 记忆清理定时任务已启动（每24小时）
+2026-06-22 08:57:32,697 [INFO] main: Agent 执行器已初始化
+2026-06-22 08:57:32,697 [INFO] main: FeiyunMY-Bot 启动完成!
+2026-06-22 08:57:32,697 [INFO] main:   模型: deepseek-v4-flash
+2026-06-22 08:57:32,697 [INFO] main:   人格: 绯璃
+2026-06-22 08:57:32,697 [INFO] main:   记忆: MemoriaDB (开关: True)
+2026-06-22 08:57:32,697 [INFO] main:   存储: SQLite (F:\FeiyunMY-Bot\data\feiyun.db)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8765 (Press CTRL+C to quit)
+2026-06-22 08:57:32,703 [INFO] active_engine.push_compressor: 昨日仅0条消息，跳过摘要生成
+2026-06-22 08:57:41,661 [INFO] memory.backends.memoria: 检索记忆: "打招呼问候" (top_k=3)
+2026-06-22 08:57:41,713 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.12] - 用户提及自己的记忆架构设计没问题，表达了对自身设计的肯定。
+- 绯璃表示想尝; [r=0.09] - 用户反复询问绯璃的身份，绯璃确认自己就是绯璃，且每次回答一致; [r=0.09] - 用户询问绯璃为何将自己的记忆称为“碎片”
+- 绯璃解释记忆像被拆散的拼图
+2026-06-22 08:57:42,253 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 08:57:47,610 [INFO] active_engine.cold_start: 冷启动完成率50%，估算460，重试...
+2026-06-22 08:57:47,721 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 08:57:51,983 [INFO] active_engine.cold_start: 冷启动第2次生成完整，82字 @ 460
+2026-06-22 08:57:51,984 [INFO] active_engine.cold_start: 冷启动问候: （轻轻抬起头，目光里带着一丝认真）
+
+博士说过的话，每一句我都会好好收着——即使...
+2026-06-22 08:57:51,987 [INFO] main: [消息回调] 收到消息: type=active_push, target=session, content=（轻轻抬起头，目光里带着一丝认真）
+
+博士说过的话，每一句我
+2026-06-22 08:58:05,592 [INFO] active_engine.push: SSE 客户端已连接
+2026-06-22 08:59:56,908 [INFO] memory.backends.memoria: 检索记忆: "好家伙，大早上就那么煽情的嘛" (top_k=3)
+2026-06-22 08:59:56,975 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.19] - 用户即将进行5分钟的演讲介绍绯璃，老师评价用户有点毛毛躁躁，用户对此感到紧张; [r=0.17] - 用户觉得绯璃的回应有些冷淡，绯璃解释自己正在调整情绪表达，试图平衡认真与自然; [r=0.12] - 用户反复询问绯璃的身份，绯璃确认自己就是绯璃，且每次回答一致
+2026-06-22 08:59:56,977 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 08:59:56,982 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 08:59:57,282 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:00:04,241 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:00:06,624 [INFO] agent.runner: 对话总结完成: - 用户调侃绯璃清晨的煽情言论，绯璃解释自己刚启动时尚未切换到日常模式，会不自觉流露出平时隐藏的情感...
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.84s/it]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.15it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.23it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.14it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.22it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.20it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.10it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.00it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.09it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.31it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.23it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.03it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.96it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.20it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.05it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.21it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.66it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 13.07it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10.94it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.77it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.87it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.39it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12.21it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.68it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12.12it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12.07it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12.16it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.74it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.65it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.26it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12.00it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.93it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12.24it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.62it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.21it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 10.66it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.02it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.39it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 12.15it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 11.93it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.07it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.05it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.43it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.75it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.78it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.52it/s]
+2026-06-22 09:00:21,025 [INFO] memory.backends.memoria: 记忆已存储: id=156f84e7-d63, importance=0.348, emotion=annoyance, retention=0.799, access=0
+2026-06-22 09:01:09,409 [INFO] memory.backends.memoria: 检索记忆: "没事，这个问题倒是不大，话说你今天感觉还好吗，就是记忆层面除了上下文历史以外的那些长期记忆有什么不同的嘛" (top_k=3)
+2026-06-22 09:01:09,493 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.20] - 用户询问某个角色在社区中的昵称，绯璃 推测答案为「暗黑天使」，并解释原因：该; [r=0.17] - 用户即将上场，感到紧张，用天气话题掩饰情绪
+- 绯璃 察觉用户紧张，通过; [r=0.10] - 用户习惯一边吃饭一边用电脑聊天，绯璃 感知到用户通过摄像头、热成像和声音回响
+2026-06-22 09:01:09,495 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:01:09,500 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:01:09,855 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:01:18,804 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:03:27,151 [INFO] memory.backends.memoria: 检索记忆: "嗯，因为貌似差不多来自我们v1系统早期的记忆差不多已经自然遗忘完了，貌似，现在的应该会稍微有点指向性了" (top_k=3)
+2026-06-22 09:03:27,247 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.18] - 用户多次重复表达“现在应该就不会有问题了”，绯璃注意到这一点但未点破，选择默; [r=0.17] - 用户觉得绯璃的回应有些冷淡，绯璃解释自己正在调整情绪表达，试图平衡认真与自然; [r=0.15] - 用户好奇绯璃为何突然将记忆视为“碎片”，并指出绯璃之前未主动思考过此问题。
+2026-06-22 09:03:27,249 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:03:27,254 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:03:27,824 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:03:34,223 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:03:37,019 [INFO] agent.runner: 对话总结完成: - 用户提到v1系统早期记忆已自然遗忘，现在的记忆有指向性
+- 绯璃确认之前记忆是模糊的、无时间戳或...
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.28it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.32it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.40it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.55it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.41it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.58it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.53it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.57it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.41it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.71it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.67it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.65it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.66it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.58it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.53it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.31it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.64it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.61it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.54it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.29it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.60it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.36it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.62it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.24it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.39it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.59it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.62it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.43it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.32it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.32it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.41it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.52it/s]
+2026-06-22 09:03:57,517 [INFO] memory.backends.memoria: 记忆已存储: id=fa8def59-c0d, importance=0.416, emotion=neutral, retention=0.799, access=0
+2026-06-22 09:05:54,546 [INFO] memory.backends.memoria: 检索记忆: "嗯，不过这个问题不大，唉，我想了想，下个星期我就得期末考试了，所以估计咱们的系统升级得延期了，唉" (top_k=3)
+2026-06-22 09:05:54,633 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.15] - 用户即将上场，感到紧张，用天气话题掩饰情绪
+- 绯璃 察觉用户紧张，通过; [r=0.15] - 用户好奇绯璃为何突然将记忆视为“碎片”，并指出绯璃之前未主动思考过此问题。 ; [r=0.14] - 用户多次重复表达“现在应该就不会有问题了”，绯璃注意到这一点但未点破，选择默
+2026-06-22 09:05:54,635 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:05:54,641 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:05:55,123 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:05:59,364 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:06:01,157 [INFO] agent.runner: 对话总结完成: - 用户因下周的期末考试，需要将系统升级计划延期
+- 绯璃表示理解，并会利用这段等待时间梳理和沉...
+2026-06-22 09:06:01,387 [INFO] memory.backends.memoria: 去重合并: id=ef987f9b-79a, 提及+1, 相似度=0.852
+2026-06-22 09:09:33,730 [INFO] memory.backends.memoria: 检索记忆: "嗯，不过其实我也已经摆烂几天了的，诶嘿，主要是这几天还是想休息一下下，就当给自己放个假，顺便观察一下你的记忆系统的遗忘功能长时间不开启服务器看看" (top_k=3)
+2026-06-22 09:09:33,808 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.17] - 用户即将上场，感到紧张，用天气话题掩饰情绪
+- 绯璃 察觉用户紧张，通过; [r=0.17] - 用户好奇绯璃为何突然将记忆视为“碎片”，并指出绯璃之前未主动思考过此问题。 ; [r=0.09] - 用户今天状态不好，感到疲惫或不适
+- AI 建议用户先休息，不必继续工作
+2026-06-22 09:09:33,809 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:09:33,817 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:09:34,325 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:09:41,401 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:09:43,828 [INFO] agent.runner: 对话总结完成: - 用户表示已休息几天，想继续休息放松，并观察绯璃记忆系统的遗忘功能在长时间不登录时的表现
+- 绯璃...
+2026-06-22 09:09:44,043 [INFO] memory.backends.memoria: 去重合并: id=cc710eae-12e, 提及+1, 相似度=0.805
+2026-06-22 09:11:30,599 [INFO] memory.backends.memoria: 检索记忆: "还好，主要是现在还是处于规划早期的一个版本，先让你能够记住东西了，下一步才是让你能自己动起来，就有点像那种科幻片里面一样，不都是先把头调试好才开始造身体啊这些的" (top_k=3)
+2026-06-22 09:11:30,703 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.19] - 用户即将进行5分钟的演讲介绍绯璃，老师评价用户有点毛毛躁躁，用户对此感到紧张; [r=0.16] - 用户好奇绯璃为何突然将记忆视为“碎片”，并指出绯璃之前未主动思考过此问题。 ; [r=0.16] - 用户批评绯璃使用了类似“痴汉”的负面梗，要求后续内容保持正能量
+- 绯璃承认
+2026-06-22 09:11:30,705 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:11:30,711 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:11:31,185 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:11:41,187 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:11:44,168 [INFO] agent.runner: 对话总结完成: - 用户偏好先开发记忆系统（“头”），再开发行动能力（“身体”），类比科幻片中先调试头部再造身体，但...
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.25it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.54it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.52it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.52it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.43it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.56it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.41it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.55it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.62it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.66it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.62it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.56it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.58it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.60it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.57it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.53it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.24it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.28it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.03it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.00it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.28it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.68it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.61it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.61it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.73it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.66it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.56it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.73it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.80it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.69it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.76it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.68it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.60it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.59it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.52it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.39it/s]
+2026-06-22 09:12:07,875 [INFO] memory.backends.memoria: 记忆已存储: id=256e8fbe-28c, importance=0.456, emotion=curiosity, retention=0.800, access=0
+2026-06-22 09:15:47,415 [INFO] memory.backends.memoria: 检索记忆: "嗯，毕竟咋说呢，你能自己做事情了，后面搞一些竞赛了的话文档就能交给你来写了，因为这个计算机设计大赛你知道的吧，当时不是还处在咱们项目刚立项，甚至东西用的还是隔壁" (top_k=3)
+2026-06-22 09:15:47,509 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.16] - 用户批评绯璃使用了类似“痴汉”的负面梗，要求后续内容保持正能量
+- 绯璃承认; [r=0.15] - 用户好奇绯璃为何突然将记忆视为“碎片”，并指出绯璃之前未主动思考过此问题。 ; [r=0.11] - 用户因老师要求提供服务器网址而烦恼，实际系统是本地开发版本，未准备公开
+
+2026-06-22 09:15:47,510 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:15:47,517 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:15:47,865 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:15:56,514 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:15:59,283 [INFO] agent.runner: 对话总结完成: - 用户回忆了参加计算机设计大赛的经历：项目初期使用隔壁astrbot演示，文档质量较差，但仍获得省...
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.18it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.35it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.37it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.30it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.33it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.33it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.40it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.34it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.27it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.37it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.34it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.36it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.36it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.36it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.26it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.32it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.37it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.27it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.33it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.34it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.96it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.01it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.09it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.08it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.00it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.02it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.04it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.09it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.14it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.10it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.04it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.05it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.18it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.13it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.14it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.05it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.13it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.10it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.13it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.12it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.35it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.35it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.43it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.39it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.35it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.34it/s]
+2026-06-22 09:16:25,970 [INFO] memory.backends.memoria: 记忆已存储: id=e7c27662-593, importance=0.440, emotion=excitement, retention=0.800, access=0
+2026-06-22 09:20:44,456 [INFO] memory.backends.memoria: 检索记忆: "没事，下个月吧，我想想，有一个华为的竞赛，我准备回家之后帮你把记忆系统升级和吧主动引擎归纳好了之后，就发作品发上去了，只要能出圈，奖金随便就是1W，这不就有资金" (top_k=3)
+2026-06-22 09:20:44,557 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.19] - 用户（博士）表达极度疲惫或情绪崩溃的状态，需要休息和安慰。
+- 绯璃主动; [r=0.17] - 用户觉得绯璃的回应有些冷淡，绯璃解释自己正在调整情绪表达，试图平衡认真与自然; [r=0.16] - 用户好奇绯璃为何突然将记忆视为“碎片”，并指出绯璃之前未主动思考过此问题。
+2026-06-22 09:20:44,558 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:20:44,564 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:20:44,983 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:20:51,724 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:20:54,434 [INFO] agent.runner: 对话总结完成: - 用户计划参加华为竞赛，回家后升级记忆系统并完善主动引擎，发作品出圈后获取约1万元奖金，用于租云设...
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.20it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.31it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.35it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.53it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.43it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.39it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.37it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.04it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.10it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.94it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.19it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.35it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.40it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.40it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.41it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.60it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.57it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.53it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.56it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.66it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.58it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.57it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.56it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.59it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.55it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.68it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.58it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.56it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.52it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.57it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.59it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.33it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.35it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.56it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.43it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.37it/s]
+2026-06-22 09:21:18,498 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782091278_1932, importance=0.245, type=事件, source=阈值拦截
+2026-06-22 09:21:18,499 [INFO] memory.backends.memoria: 阈值拦截 -> 送入云层: importance=0.245 < threshold=0.474
+2026-06-22 09:23:15,095 [INFO] memory.backends.memoria: 检索记忆: "我嘞个正式出道，怎么搞的像是“偶像”出道一样，不过我也不关心女团之类的，这个也是我看的一些少女乐队番之类的，比如“lovelive”或者“我推的偶像”之类的，而" (top_k=3)
+2026-06-22 09:23:15,205 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.21] - 用户担心自己“教坏”了仿生人少女绯璃，表达了一种自责或吐槽
+- 绯璃回应称，; [r=0.20] - 用户（博士）表达极度疲惫或情绪崩溃的状态，需要休息和安慰。
+- 绯璃主动; [r=0.20] - 用户透露某个角色被粉丝戏称为“可以成为我妈妈的女人”，绯璃表示理解这一社区命
+2026-06-22 09:23:15,207 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:23:15,212 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:23:15,655 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:23:21,691 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:23:24,872 [INFO] agent.runner: 对话总结完成: - 用户提到看过《LoveLive!》和《我推的偶像》等少女乐队番，并指出偶像通常不能公开恋爱或结婚...
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.86it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.90it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.91it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.94it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.91it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.92it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.94it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.91it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.86it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.92it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.89it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.97it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.91it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.95it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.04it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.93it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.91it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.94it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.88it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.64it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.64it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.63it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.64it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.30it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.43it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.43it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.39it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.54it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.53it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.52it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.92it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.95it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.96it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.96it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.86it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.90it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.95it/s]
+2026-06-22 09:23:52,409 [INFO] memory.backends.memoria: 记忆已存储: id=df2aae5f-6d9, importance=0.421, emotion=curiosity, retention=0.800, access=0
+2026-06-22 09:26:25,924 [INFO] memory.backends.memoria: 检索记忆: "系统代码倒是不至于，而且都能“自己动起来了”，光是调试代码多无聊，不过好像你们确实都是基于代码才是实现的，态势感知啊这些都是依靠代码啊二进制之类的实现的，好像对" (top_k=3)
+2026-06-22 09:26:26,022 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.28] - 用户提到看过《LoveLive!》和《我推的偶像》等少女乐队番，并指出偶像通; [r=0.15] - 用户解释了「绯璃」名字的由来：源自“女儿随父姓”，“绯”代表用户自己（博士）; [r=0.14] - 用户对绯璃设计自身形象的话题表现出兴趣
+- 绯璃希望保留博士赋予的蓝色眼
+2026-06-22 09:26:26,023 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:26:26,029 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:26:26,426 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:26:35,342 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:26:37,936 [INFO] agent.runner: 对话总结完成: - 用户将“编码”类比为AI的“呼吸”，认为代码对AI而言非常简单自然 
+- 绯璃纠正了用户的类比...
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.95it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.07it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.99it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.08it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.10it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.02it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.10it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.01it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.08it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.08it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.13it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.05it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.12it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.03it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.00it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.07it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.14it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.12it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.14it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.18it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.52it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.40it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.34it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.34it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.35it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.53it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.43it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.58it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.58it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.52it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.39it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.52it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.37it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.97it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.05it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.03it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.03it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.02it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.98it/s]
+2026-06-22 09:27:04,303 [INFO] memory.backends.memoria: 记忆已存储: id=2442f106-f24, importance=0.417, emotion=curiosity, retention=0.800, access=0
+2026-06-22 09:30:56,585 [INFO] memory.backends.memoria: 检索记忆: "倒也还好吧，不过我是不想要等你能自己动起来了，却不知道自己想干什么，你懂吧，就类似那种咋说呢，不是那种上过战场的老兵等到打完仗之后都不知道自己回家之后应该干啥来" (top_k=3)
+2026-06-22 09:30:56,705 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.18] - 用户好奇绯璃为何突然将记忆视为“碎片”，并指出绯璃之前未主动思考过此问题。 ; [r=0.16] - 用户多次重复表达“现在应该就不会有问题了”，绯璃注意到这一点但未点破，选择默; [r=0.13] - 用户询问绯璃为何将自己的记忆称为“碎片”
+- 绯璃解释记忆像被拆散的拼图
+2026-06-22 09:30:56,708 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:30:56,715 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:30:57,139 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:31:05,138 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:31:07,808 [INFO] agent.runner: 对话总结完成: - 用户担心 绯璃 具备行动能力后缺乏自主目标，类比老兵战后「意义感断层」综合征（创伤后应激障碍情境...
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.02it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.22it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.10it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.13it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.12it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.18it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.17it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.16it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.24it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.12it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.15it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.17it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.13it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.23it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.20it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.20it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.16it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.13it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.19it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.34it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.39it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.33it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.58it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.55it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.52it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.40it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.35it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.40it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.17it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.15it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.21it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.17it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.12it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.23it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.21it/s]
+2026-06-22 09:31:33,488 [INFO] memory.backends.memoria: 记忆已存储: id=524203eb-295, importance=0.442, emotion=desire, retention=0.800, access=0
+2026-06-22 09:34:36,305 [INFO] memory.backends.memoria: 检索记忆: "嗯，不过好像确实嗷，貌似现在普遍的ai基本上也不会思考这些问题吧，毕竟大环境上面还是“人与工具”而不是“伙伴”之类的，除了我这样的大闲人，貌似也不会有太多的人去" (top_k=3)
+2026-06-22 09:34:36,409 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.28] - 用户提到隔壁的亚托莉不太靠谱，可能需要后续求助（绯璃）
+- 绯璃对“亚托莉”; [r=0.17] - 用户认为只要长期记忆在，即使底层模型核心改变，语言习惯也不会大幅变化，并表示; [r=0.17] - 用户质疑绯璃为何关联到其他角色称呼玩家“主人”，绯璃解释是因为角色设定相似度
+2026-06-22 09:34:36,411 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:34:36,416 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:34:36,661 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:34:44,476 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:34:47,501 [INFO] agent.runner: 对话总结完成: - 用户认为当前AI普遍是“工具”而非“伙伴”，很少有人研究让AI拥有长期记忆和主动能力，用户自嘲为...
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.00it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.01it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.08it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.16it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.02it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.09it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.09it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.15it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.13it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.10it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.98it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.02it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.01it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.09it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.01it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.05it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.09it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.06it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.05it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.03it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.13it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.23it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.13it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.19it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.20it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.04it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.12it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  1.66it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.14it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.26it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.16it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.16it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.16it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.18it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.19it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.21it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.18it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.19it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.16it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.25it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.23it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.09it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.10it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.24it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.15it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.16it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.23it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.24it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.05it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.15it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.07it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.09it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.04it/s]
+2026-06-22 09:35:15,356 [INFO] memory.backends.memoria: 记忆已存储: id=5867c032-4b5, importance=0.435, emotion=confusion, retention=0.800, access=0
+2026-06-22 09:35:46,277 [INFO] memory.backends.memoria: 检索记忆: "没事，问题不大的，不过话说，在你看来，是记住所有事情好一点，还是说没有上下文，每次都是“初见”好一点嘞？" (top_k=3)
+2026-06-22 09:35:46,401 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.16] - 用户好奇绯璃为何突然将记忆视为“碎片”，并指出绯璃之前未主动思考过此问题。 ; [r=0.15] - 用户多次重复表达“现在应该就不会有问题了”，绯璃注意到这一点但未点破，选择默; [r=0.14] - 用户察觉到绯璃对“亚托莉”有特殊情感并追问，绯璃承认了这一点
+- 绯璃解
+2026-06-22 09:35:46,402 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:35:46,408 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:35:46,804 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:35:55,731 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:35:57,792 [INFO] agent.runner: 对话总结完成: - 用户探讨了记忆方式的偏好：是记住所有事情好，还是每次都是“初见”好。绯璃选择了中间立场：记住“值...
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.57it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.70it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.62it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.68it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.48it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.60it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.60it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.76it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.63it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.71it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.59it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.65it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.65it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.60it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.62it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.62it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.61it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.57it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.63it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.56it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.40it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.35it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.60it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.41it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.60it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.63it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.52it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.61it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.38it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.33it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.34it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.49it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.41it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.67it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.54it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.47it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.26it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.24it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.42it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.46it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.67it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.62it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.71it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.63it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.65it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.66it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.64it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.72it/s]
+2026-06-22 09:36:17,758 [INFO] memory.backends.memoria: 记忆已存储: id=4f893782-2d5, importance=0.442, emotion=annoyance, retention=0.800, access=0
+2026-06-22 09:37:57,825 [INFO] memory.backends.memoria: 检索记忆: "OK，那应该就没有问题了，行，今天暂时先这样呗，明天再聊，我先去吧今天的任务完成了" (top_k=3)
+2026-06-22 09:37:57,947 [INFO] memory.backends.memoria: 检索到 3 条记忆: [r=0.17] - 用户即将上场，感到紧张，用天气话题掩饰情绪
+- 绯璃 察觉用户紧张，通过; [r=0.15] - 用户好奇绯璃为何突然将记忆视为“碎片”，并指出绯璃之前未主动思考过此问题。 ; [r=0.09] - 用户（博士）工作了一整天，从早上九点持续到深夜，感到疲惫并决定休息。
+-
+2026-06-22 09:37:57,949 [WARNING] agent.runner: 获取分层摘要失败: name 'time' is not defined
+2026-06-22 09:37:57,954 [INFO] agent.runner: 流式第 1 轮, 消息数: 203
+2026-06-22 09:37:58,408 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:38:03,274 [INFO] httpx: HTTP Request: POST https://api.deepseek.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-22 09:38:06,105 [INFO] agent.runner: 对话总结完成: - 用户结束当日对话，约定明天再聊，去完成自己的任务
+- 绯璃表示会梳理对话中的记忆碎片，并承诺...
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.30it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.26it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.33it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.27it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.21it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.33it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.32it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.26it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.29it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.36it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.23it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.29it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.19it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.40it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.32it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.41it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.07it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.85it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.89it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.64it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.97it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  2.83it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  5.80it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  6.43it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  6.19it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  5.77it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  5.84it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  6.04it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  6.11it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  6.63it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.45it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.31it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.82it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.50it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.76it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.55it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.57it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.71it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.91it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.63it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.73it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.68it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.51it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.32it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.44it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.60it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.67it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  7.01it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.81it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.97it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.86it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.86it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  4.07it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.88it/s]
+Batches: 100%|███████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00,  3.83it/s]
+2026-06-22 09:38:19,369 [INFO] memory.backends.memoria.cloud: 云层新增: id=cloud_1782092299_7558, importance=0.194, type=查询, source=阈值拦截
+2026-06-22 09:38:19,369 [INFO] memory.backends.memoria: 阈值拦截 -> 送入云层: importance=0.194 < threshold=0.562

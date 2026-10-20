@@ -1,0 +1,117 @@
+/* ==========================================
+   FeiyunMY-Bot - Global Styles & CSS Variables
+   ========================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 浅色主题配色 */
+  --color-primary: #8B1A2B;
+  --color-primary-hover: #A01F33;
+  --color-primary-light: #C9465C;
+  
+  --color-bg-base: #FBF8F7;
+  --color-bg-card: #FFFFFF;
+  --color-bg-hover: #F5EEEC;
+  --color-bg-input: #FFFFFF;
+  
+  --color-border: #E5D5D2;
+  --color-border-focus: #8B1A2B;
+  
+  --color-text-primary: #2D181C;
+  --color-text-secondary: #7A6065;
+  --color-text-disabled: #BFA8AC;
+  
+  --color-success: #2E7D32;
+  --color-warning: #B86E10;
+  --color-error: #C62828;
+  --color-info: #3D6A94;
+  
+  --sidebar-width: 220px;
+  --session-panel-width: 280px;
+  --topbar-height: 56px;
+}
+
+/* 暗红色主题 */
+.dark {
+  --color-primary: #8B1A2B;
+  --color-primary-hover: #A01F33;
+  --color-primary-light: #C9465C;
+  
+  --color-bg-base: #1A1012;
+  --color-bg-card: #241518;
+  --color-bg-hover: #2D1A1E;
+  --color-bg-input: #1E1315;
+  
+  --color-border: #3A2228;
+  --color-border-focus: #8B1A2B;
+  
+  --color-text-primary: #EDE0D4;
+  --color-text-secondary: #B8A0A0;
+  --color-text-disabled: #6B5055;
+  
+  --color-success: #3D8B40;
+  --color-warning: #C77D20;
+  --color-error: #C9463A;
+  --color-info: #5A7DA8;
+}
+
+/* 全局过渡 */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
+
+/* 工具类 */
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-text-primary rounded-md font-medium 
+           hover:bg-primary-hover transition-colors duration-200 
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-bg-card border border-border text-text-primary rounded-md 
+           font-medium hover:bg-bg-hover transition-colors duration-200;
+  }
+  
+  .btn-danger {
+    @apply px-4 py-2 bg-error text-white rounded-md font-medium 
+           hover:opacity-90 transition-opacity duration-200;
+  }
+  
+  .input-base {
+    @apply w-full px-3 py-2 bg-bg-input border border-border rounded-md 
+           text-text-primary placeholder-text-secondary 
+           focus:outline-none focus:border-border-focus focus:ring-1 focus:ring-border-focus
+           transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-bg-card border border-border rounded-lg p-4;
+  }
+  
+  .panel {
+    @apply flex-1 p-6 overflow-y-auto;
+  }
+}

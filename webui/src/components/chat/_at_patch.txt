@@ -1,0 +1,2 @@
+// Patch for ChatInput.vue - @ agent autocomplete
+// To be inserted at the end of the file after the existing </script>
